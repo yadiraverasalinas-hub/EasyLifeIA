@@ -1,0 +1,613 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.headerActions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.periodSelect {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background-color: var(--background);
+  color: var(--text);
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.periodSelect:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.addBtn {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.addBtn:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+/* Budget Card */
+.budgetCard {
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.budgetTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.budgetLabel {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+}
+
+.budgetEditRow {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.budgetAmount {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--secondary);
+  margin: 0;
+}
+
+.currency {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+.budgetInput {
+  width: 100px;
+  padding: 0.3rem 0.5rem;
+  border: 2px solid var(--primary);
+  border-radius: var(--radius-sm);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+  background: var(--background);
+}
+
+.budgetInput:focus {
+  outline: none;
+}
+
+.editBtn {
+  background: transparent;
+  font-size: 1rem;
+  padding: 0.2rem;
+  opacity: 0.6;
+}
+
+.editBtn:hover {
+  opacity: 1;
+}
+
+.confirmBtn {
+  background-color: var(--success);
+  color: white;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Circle Progress */
+.circleProgress {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+}
+
+.circleSvg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.circleTrack {
+  fill: none;
+  stroke: var(--border);
+  stroke-width: 3.5;
+}
+
+.circleFill {
+  fill: none;
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  transition: stroke-dasharray 1s ease;
+}
+
+.circleText {
+  fill: var(--text);
+  font-size: 8px;
+  font-weight: 700;
+  text-anchor: middle;
+  transform: rotate(90deg);
+  transform-origin: 18px 18px;
+}
+
+/* Progress Bar */
+.progressBar {
+  height: 8px;
+  background-color: var(--border);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 0.8s ease;
+}
+
+.summaryRow {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.summaryItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.summaryLabel {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.summaryValue {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.summaryDivider {
+  width: 1px;
+  height: 32px;
+  background-color: var(--border);
+}
+
+/* Add Form */
+.addForm {
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  animation: slideDown 0.3s ease;
+}
+
+.addForm h3 {
+  margin-bottom: 1rem;
+  color: var(--secondary);
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.formGroup label {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.formGroup input,
+.formGroup select {
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background-color: var(--background);
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.formGroup input:focus,
+.formGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.saveBtn {
+  width: 100%;
+  padding: 0.875rem;
+  background-color: var(--secondary);
+  color: white;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+}
+
+.saveBtn:hover {
+  background-color: #152740;
+}
+
+/* Category breakdown */
+.categoryCard {
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.categoryCard h3 {
+  margin-bottom: 1rem;
+}
+
+.categoryList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.categoryItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.catIcon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  width: 32px;
+  text-align: center;
+}
+
+.catBar {
+  flex: 1;
+}
+
+.catLabelRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.3rem;
+}
+
+.catName {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.catAmount {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+.catProgressBg {
+  height: 6px;
+  background-color: var(--border);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.catProgressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  border-radius: var(--radius-full);
+  transition: width 0.8s ease;
+}
+
+/* Expense list */
+.listSection {
+  margin-bottom: 1.5rem;
+}
+
+.listSection h3 {
+  margin-bottom: 0.875rem;
+}
+
+.expenseList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.expenseCard {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1rem;
+  transition: var(--transition);
+}
+
+.expenseCard:hover {
+  transform: translateX(2px);
+  border-color: var(--primary-light);
+}
+
+.expIcon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  width: 32px;
+  text-align: center;
+}
+
+.expInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.expDesc {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.expMeta {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.expAmount {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--secondary);
+  flex-shrink: 0;
+}
+
+.expDelete {
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  padding: 0.25rem 0.4rem;
+  border-radius: 50%;
+  opacity: 0.5;
+  transition: var(--transition);
+}
+
+.expDelete:hover {
+  opacity: 1;
+  background-color: #ffe0e0;
+  color: var(--error);
+}
+
+.emptyState {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  color: var(--text-muted);
+  background-color: rgba(0,0,0,0.02);
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--border);
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-color-scheme: dark) {
+  .emptyState {
+    background-color: rgba(255,255,255,0.02);
+  }
+  .expDelete:hover {
+    background-color: rgba(230, 57, 70, 0.15);
+    color: #ff8a95;
+  }
+}
+
+/* Search and Filter */
+.searchFilterRow {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background-color: var(--background);
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.filterSelect {
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background-color: var(--background);
+  color: var(--text);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.filterSelect:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* Visual Chart */
+.chartCard {
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.chartCard h3 {
+  margin-bottom: 1rem;
+}
+
+.chartContainer {
+  padding: 1rem 0;
+}
+
+.chartBars {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  gap: 0.75rem;
+  height: 150px;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.chartBarGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  max-width: 60px;
+}
+
+.chartBar {
+  width: 100%;
+  min-height: 4px;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  transition: height 0.5s ease;
+  margin-bottom: 0.5rem;
+}
+
+.chartBarLabel {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.chartBarValue {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* Savings Report */
+.savingsCard {
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.savingsCard h3 {
+  margin-bottom: 1rem;
+}
+
+.savingsEmpty {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.savingsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.savingsMain {
+  text-align: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.savingsLabel {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.savingsAmount {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.savingsDetails {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.savingsDetail {
+  text-align: center;
+  padding: 0.75rem 0.5rem;
+  background-color: rgba(0,0,0,0.02);
+  border-radius: var(--radius-sm);
+}
+
+.savingsDetailLabel {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.savingsDetailValue {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.savingsProgress {
+  margin-top: 0.5rem;
+}
+
+.savingsProgressBar {
+  height: 8px;
+  background-color: var(--border);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.savingsProgressFill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 0.8s ease;
+}
+
+.savingsProgressText {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  .savingsDetail {
+    background-color: rgba(255,255,255,0.02);
+  }
+}

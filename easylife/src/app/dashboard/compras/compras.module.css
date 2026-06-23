@@ -1,0 +1,256 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.addBtn {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.addBtn:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.addForm {
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+  animation: slideDown 0.3s ease-out;
+}
+
+.formRow {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.addInput {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background-color: var(--background);
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.addInput:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.addQtyInput {
+  width: 80px;
+  padding: 0.75rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background-color: var(--background);
+  color: var(--text);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.addQtyInput:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.saveBtn {
+  background-color: var(--secondary);
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.saveBtn:hover {
+  background-color: #152740;
+}
+
+.section {
+  margin-bottom: 1.5rem;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.sectionHeader .sectionTitle {
+  margin-bottom: 0;
+}
+
+.actionBtns {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.actionBtn {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--radius-full);
+  background-color: var(--secondary);
+  color: white;
+  transition: var(--transition);
+}
+
+.actionBtn:hover {
+  background-color: #152740;
+  transform: translateY(-1px);
+}
+
+.clearBtn {
+  background-color: var(--text-muted);
+}
+
+.clearBtn:hover {
+  background-color: var(--error);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.itemCard {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  gap: 0.75rem;
+  transition: var(--transition);
+}
+
+.itemCard:hover {
+  transform: translateX(2px);
+  border-color: var(--primary-light);
+}
+
+.checkedCard {
+  opacity: 0.65;
+}
+
+.checkbox {
+  background: transparent;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.checkboxCircle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  transition: var(--transition);
+}
+
+.checkbox:hover .checkboxCircle {
+  border-color: var(--primary);
+  background-color: var(--primary-light);
+}
+
+.checkboxDone .checkboxCircleFill {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: var(--success);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.itemInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.itemName {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text);
+  text-transform: capitalize;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.itemQty {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.itemRecipe {
+  font-size: 0.75rem;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.deleteBtn {
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  padding: 0.25rem 0.4rem;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.deleteBtn:hover {
+  background-color: #ffe0e0;
+  color: var(--error);
+}
+
+.emptyState {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--text-muted);
+  background-color: rgba(0,0,0,0.02);
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--border);
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-color-scheme: dark) {
+  .emptyState {
+    background-color: rgba(255,255,255,0.02);
+  }
+  .deleteBtn:hover {
+    background-color: rgba(230, 57, 70, 0.15);
+    color: #ff8a95;
+  }
+}

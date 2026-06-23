@@ -1,0 +1,3638 @@
+                              n
+
+
+   UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS
+
+
+               FACULTAD DE INGENIERÍA
+
+
+PROGRAMA DE INGENIERÍA DE SISTEMAS DE INFORMACIÓN
+
+
+    CURSO: INGENIERÍA DE REQUISITOS (1ASI0786)
+
+
+                  NRC (SECCIÓN): 17490
+
+
+                       “EasyLife AI”
+
+                        AUTORES:
+
+
+       Arredondo Cordova, Diego Frank (U20251E656)
+
+      Quintanilla Simeón, Camila Andrea (U20251G179)
+
+         Rios Huaringa, Franco Daniel (U20251E231)
+
+       Sanchez Espejo, Joaquin Alejandro (U202515790)
+
+      Ventocilla Sanchez, Sheyla Marcelina (U20251F093)
+
+          Vera Salinas, Yadira Yajaira (U20251E941)
+
+
+
+                       PROFESOR:
+
+
+                 Vega Calero, Wilder Aurelio
+
+
+                 Lima, [09 de junio de 2026]
+                                                          1
+REGISTRO DE VERSIONES DEL INFORME
+
+
+ Versión     Fecha              Autor               Descripción de modificación
+
+
+                                                Creación del informe. Se desarrolló
+                                                el Capítulo I completo: Startup
+                                                Profile (descripción de la startup y
+                                                perfiles de integrantes), Solution
+                        Todos los integrantes
+   1.0     12/03/2026                           Profile (antecedentes y problemática
+                        del equipo
+                                                con 5W's-2H's, Lean UX Problem
+                                                Statements,            Assumptions,
+                                                Hypothesis Statements y Lean UX
+                                                Canvas).
+
+
+                                                Correcciones en las secciones del
+                                                Capítulo I según retroalimentación
+                        Todos los integrantes
+   1.1     28/03/2026                           recibida. Se añadió el Anexo de
+                        del equipo
+                                                Videos de Exposiciones con el enlace
+                                                correspondiente al Segundo Avance
+
+
+                                                Trabajo Parcial: adición del Capítulo
+                                                II completo (Research) y Capítulo III
+                        Todos los integrantes
+   1.2     09/03/2026                           (As-Is / To-Be Scenario Mapping).
+                        del equipo
+                                                Mejoras en redacción y análisis de
+                                                entrevistas.
+
+
+
+
+                                                                                        2
+                                     ÍNDICE
+
+1. Student Outcome …………………………………………………………………………....… 5
+2. CAPÍTULO I: Introducción ………………………………………………...………............... 6
+  2.1. Startup Profile ……………..………………………………...…………………………. 6
+       2.1.1. Descripción de la Startup ………………………………………………….….… 6
+             2.1.1.1. Misión ……………………………………………………………….… 7
+             2.1.1.2. Visión ……………………………………………………………….…. 7
+       2.1.2. Perfiles de integrantes del equipo ……………………………………..………... 7
+  2.2. Solution Profile ……………………………………………………………………….… 8
+       2.2.1. Antecedentes y problemática (The 5 ‘W’s y 2 ‘H’s) ………………………....…. 8
+       2.2.2. Lean UX Process …………………………………………………….…….....… 11
+             2.2.2.1. Lean UX Problem Statements …………………………..…………….. 11
+             2.2.2.2. Lean UX Assumptions ………………………………………………... 11
+             2.2.2.3. Lean UX Hypothesis Statements ……………………..………….…… 12
+             2.2.2.4. Lean UX Canvas ……………………………………………………… 13
+3. CAPÍTULO II: Research ……………………………...………………....…..…………….… 14
+  3.1. Segmentos objetivo …….……………………………………….……………..……….. 14
+  3.2. Competidores ………………………………………..………………..………………… 15
+  3.3. Análisis competitivo …………………………………………..……………….……….. 16
+  3.4. Estrategias y tácticas frente a competidores …………..…….………………………….. 19
+  3.5. Entrevistas ……………………………………………………………………………… 20
+       3.5.1. Diseño de entrevistas …………………………………..……………………….. 20
+       3.5.2. Registro de entrevistas ………………………………………………….………. 20
+       3.5.3. Análisis de entrevistas ………………………………………………….………. 24
+  3.6. Requirements Elicitation & Analysis …………………………..………………………. 25
+       3.6.1. Needfinding ………………………………………………………...…………... 25
+       3.6.2. User Personas por cada segmento objetivo …………...………………………… 26
+       3.6.3. User Task Matrix ………………………………………….…………................. 27
+       3.6.4. Empathy Maps ………………………………………………………….............. 28
+4. CAPÍTULO III: Requirements Specification ……………………..……………………......... 28
+  4.1. As–Is Scenario Mapping ……………………………………………………................. 28
+
+                                                                                    3
+  4.2. To-Be Scenario Mapping ……………………………………………………………….. 29
+  4.3. Epics …………………………………………………………………………………….. 29
+  4.4. User Stories ……………………………………………………………………………… 31
+  4.5. Product Backlog ….…………………………………………………………………...… 99
+  4.6. Sprint Backlogs ….……………………………………………………………………… 99
+5. CONCLUSIONES Y RECOMENDACIONES …………………………………….…..…… 104
+  5.1. Conclusiones …………………………………………………………………………... 104
+  5.2. Recomendaciones …………………………………………………………………….... 104
+6. Referencias bibliográficas ………………….………………………………………………… 105
+7. Anexos ……………………………………………………………………………………….. 105
+
+
+
+
+                                                            4
+1) Student Outcome
+   El desarrollo del proyecto "EasyLife AI" permitió aplicar los conceptos y técnicas de la
+   Ingeniería de Requisitos en la formulación de una solución tecnológica orientada a un problema
+   real y cotidiano: la dificultad que enfrentan los estudiantes foráneos y jóvenes que viven solos
+   para planificar su alimentación diaria de manera eficiente.
+
+   Durante el proceso, el equipo identificó, analizó y estructuró de manera sistemática la
+   problemática relacionada con la falta de tiempo, la escasa experiencia culinaria y los recursos
+   económicos limitados de este segmento. A partir de ello, se determinó que la principal necesidad
+   no es simplemente saber qué comprar, sino saber qué cocinar con lo que se tiene disponible, en
+   el menor tiempo posible.
+
+   Se aplicó la metodología Lean UX para validar los supuestos del equipo y enfocar el desarrollo
+   en las necesidades reales de los usuarios. Este proceso evidenció que la recomendación de
+   recetas personalizadas según tiempo disponible, ingredientes en casa y presupuesto constituye
+   la propuesta de valor central de EasyLife AI, complementada por una función de planificación
+   de compras que reduce el gasto innecesario y evita la dependencia de la comida rápida.
+
+   En consecuencia, el proyecto demuestra la capacidad del equipo para desarrollar propuestas
+   innovadoras centradas en el usuario, analizar información obtenida mediante investigación, y
+   formular soluciones tecnológicas que contribuyan a mejorar la calidad de vida mediante el uso
+   eficiente del tiempo y los recursos.
+
+
+      Criterio Específico           Acciones realizadas                      Conclusiones
+
+     Desarrollo        de     TB1: Todo el equipo: Diseño y      Las 4 entrevistas confirmaron
+     experimentos.Impl        ejecución de 4 entrevistas a       que el 100% de los estudiantes
+     ementa                   estudiantes foráneos (Azumi,       foráneos entrevistados recurre
+     experimentos             Yanela, Joaquín, Brenda) como      a comida rápida o menús con
+     exploratorios para       experimento exploratorio para      frecuencia,      validando     la
+     validar hipótesis y      validar las hipótesis Lean UX.     hipótesis     central.   El   75%
+     analiza          sus     Elaboración de artefactos UX       estaría dispuesto a pagar por
+     resultados.              como instrumentos de análisis.     EasyLife AI.
+
+
+                                                                                                     5
+                                                                      El   análisis     de     entrevistas,
+     Análisis              e     TB1: Todo el equipo: Análisis de     sustentado      en     gráficos    de
+     interpretación       de     respuestas de entrevistas con        frecuencia, evidenció que la
+     datos/resultados.A          sustento estadístico (gráficos de    indecisión sobre qué cocinar
+     naliza e interpreta         barras). Construcción del User       (no la falta de habilidad) es el
+     resultados         para     Task Matrix con frecuencia e         principal       obstáculo         del
+     sacar conclusiones          importancia. Elaboración del         segmento. El To-Be Scenario
+     con      juicio      de     As-Is y To-Be Scenario Mapping       Mapping         muestra          cómo
+     ingeniería.                 a partir de hallazgos.               EasyLife     AI        elimina    esa
+                                                                      fricción.
+
+
+
+2) CAPÍTULO I: Introducción
+   2.1)    Startup Profile
+           2.1.1)      Descripción de la Startup
+                       EasyLife AI" es una startup tecnológica que desarrolla una aplicación móvil
+                       orientada a facilitar la planificación de la alimentación diaria mediante el uso de
+                       inteligencia artificial. La solución está diseñada principalmente para estudiantes
+                       foráneos y jóvenes que viven solos, quienes deben cocinar de manera autónoma
+                       pero carecen de tiempo, experiencia culinaria o una planificación estructurada.
+
+                       La aplicación funciona como un asistente culinario inteligente: a partir de los
+                       ingredientes disponibles en casa, el tiempo libre del usuario y su presupuesto,
+                       EasyLife AI sugiere recetas personalizadas, paso a paso, adaptadas a su contexto
+                       real. De forma complementaria, la plataforma genera listas de compras
+                       optimizadas que permiten al usuario abastecerse de manera eficiente, reducir el
+                       desperdicio de alimentos y disminuir los gastos innecesarios.
+
+                       De esta manera, EasyLife AI aborda un problema concreto: la falta de
+                       organización alimentaria que lleva a los estudiantes foráneos a depender de la
+                       comida rápida o de opciones poco saludables y costosas, con impacto negativo
+                       tanto en su economía como en su bienestar.
+
+
+
+                                                                                                              6
+         2.1.1.1)   Misión
+                    Desarrollar y ofrecer una aplicación móvil inteligente que, a partir de
+                    los ingredientes disponibles, el tiempo libre y el presupuesto del
+                    usuario, recomiende recetas de cocina personalizadas y planes de
+                    compras optimizados. A través del uso de inteligencia artificial,
+                    EasyLife AI busca facilitar la autonomía alimentaria de estudiantes
+                    foráneos y jóvenes que viven solos, promoviendo una alimentación
+                    más saludable, económica y eficiente.
+
+         2.1.1.2)   Visión
+                    Ser la plataforma de referencia en asistencia culinaria inteligente para
+                    jóvenes latinoamericanos que viven de manera independiente,
+                    ayudándolos a desarrollar hábitos alimentarios saludables y
+                    sostenibles mediante el uso eficiente de los recursos disponibles, el
+                    tiempo y la tecnología.
+
+2.1.2)   Perfiles de integrantes del equipo
+         El equipo de EasyLife AI está conformado por estudiantes de Ingeniería de
+         Sistemas de Información de la Universidad Peruana de Ciencias Aplicadas, con
+         roles diferenciados que cubren las áreas clave del proyecto:
+
+         a) Cliente: Ventocilla Sanchez, Sheyla
+             Estudiante de la carrera de ingeniería de sistemas de información, tiene la
+             capacidad en crear ideas innovadoras orientadas en la mejorar de calidad de
+             vida estudiantil. Teniendo habilidades en análisis de problemas y propuesta
+             de solución.
+         b) Análisis y Diseño: Quintanilla Simeón, Camila
+             Estudiante de ingeniería de sistemas de información, con capacidad para
+             analizar requerimientos y diseñar soluciones eficientes. Tiene habilidades
+             en el modelado de sistemas y la organización de procesos, aportando
+             propuestas claras y bien estructuradas.
+
+
+
+
+                                                                                          7
+                c) Desarrollo: Rios Huaringa, Franco
+                    Estudiante de ingeniería de sistemas de información, con capacidad de
+                    desarrollo de software. Cuenta con conocimientos en programación y
+                    creación de aplicaciones, destacándose por su capacidad para analizar
+                    problemas y proponer soluciones tecnológicas.
+
+                d) Desarrollo: Vera Salinas, Yadira
+                    Estudiante de ingeniería de sistemas de información con enfoque en el
+                    desarrollo de software. Posee habilidades en programación, resolución de
+                    problemas y construcción de soluciones eficientes a las necesidades del
+                    usuario. Se caracteriza por su pensamiento lógico, capacidad de aprendizaje
+                    continuo y compromiso con la calidad y optimización del sistema.
+
+                e) QA: Arredondo Cordova, Diego
+                    Estudiante de la carrera de ingeniería de sistemas de información, tiene la
+                    capacidad de desarrollar y diseñar sistemas. Tiene la habilidad de identificar
+                    los problemas, proponiendo mejoras que contribuyan a la optimización y
+                    calidad del sistema.
+
+                f) Mantenimiento: Sánchez Espejo, Joaquin
+                    Estudiante de la carrera de Ingeniería de sistemas de información, con
+                    capacidad para analizar y mantener sistemas de software. Se encarga de
+                    identificar errores, proponer mejoras y optimizar el rendimiento del sistema,
+                    además de adaptar nuevos requerimientos según necesidades del usuario.
+
+2.2)   Solution Profile
+       2.2.1)   Antecedentes y problemática (The 5 ‘W’s y 2 ‘H’s)
+                Los estudiantes foráneos y jóvenes que viven solos representan un segmento
+                especialmente vulnerable en cuanto a organización alimentaria. Al asumir por
+                primera vez la responsabilidad de su propia alimentación, se enfrentan a
+                múltiples barreras simultáneas: falta de tiempo, escasa experiencia cocinando,
+                presupuesto limitado y ausencia de planificación. La consecuencia inmediata es
+                la dependencia de la comida rápida, que a largo plazo resulta perjudicial para la
+                salud. A continuación, se describe la problemática mediante las 5 W's y 2 H's:
+
+                                                                                                 8
+a) What (¿Qué?)
+   ¿Qué problema se está abordando?
+   Los estudiantes foráneos y jóvenes que viven solos no saben qué cocinar con
+   los ingredientes que tienen disponibles, no disponen de tiempo suficiente
+   para planificar su alimentación y terminan recurriendo a comida rápida o
+   pidiendo delivery. Esto genera un gasto mayor al necesario, una
+   alimentación poco equilibrada y el desperdicio de ingredientes comprados
+   sin una planificación previa.
+
+b) Who (¿Quién?)
+   ¿Quiénes están involucrados?
+   •   Usuarios principales: Estudiantes universitarios foráneos y jóvenes
+       profesionales que viven solos, cocinan de manera autónoma y tienen
+       rutinas con tiempo limitado.
+   •   Usuarios secundarios: Cualquier persona interesada en optimizar su
+       alimentación diaria, reducir gastos en comida y aprovechar mejor los
+       ingredientes disponibles en casa.
+   •   Stakeholders: Equipo de desarrollo de EasyLife AI y administradores de
+       la plataforma.
+
+c) Where (¿Dónde?)
+   ¿Dónde ocurre el problema?
+   El problema se presenta en el ámbito doméstico cotidiano: en el momento
+   en que el usuario llega a casa con poco tiempo, abre el refrigerador y no sabe
+   qué preparar con lo que tiene. También se manifiesta al momento de ir al
+   supermercado sin una lista clara, generando compras impulsivas o
+   insuficientes.
+
+d) When (¿Cuándo?)
+   ¿Cuándo ocurre el problema?
+   Ocurre en situaciones cotidianas como:
+   •   Al inicio del día, cuando el usuario necesita decidir qué desayunar o
+       preparar para llevar.
+
+
+                                                                               9
+   •   En la tarde-noche, al regresar de clases o trabajo con poco tiempo y
+       energía para cocinar.
+   •   Al momento de ir a comprar, sin una lista organizada ni un plan de
+       comidas para la semana.
+   •   Cuando el presupuesto es ajustado y el usuario no sabe cómo rendir los
+       ingredientes disponibles.
+
+e) Why (¿Por qué?)
+   ¿Por qué ocurre el problema?
+   •   Falta de tiempo y planificación semanal de comidas.
+   •   Escasa experiencia culinaria, especialmente en quienes viven solos por
+       primera vez.
+   •   Ausencia de una herramienta accesible que adapte las recetas a los
+       ingredientes disponibles y al tiempo real del usuario.
+   •   Tendencia a recurrir a la comida rápida como solución inmediata ante
+       la indecisión o el cansancio.
+
+f) How (¿Cómo?)
+   ¿Cómo se solucionará el problema?
+   Mediante el desarrollo de EasyLife AI, una aplicación móvil que actúa como
+   asistente culinario inteligente. El usuario ingresa los ingredientes que tiene
+   disponibles en casa, su tiempo libre y su presupuesto; la aplicación, usando
+   inteligencia artificial, le sugiere recetas personalizadas, paso a paso y
+   adaptadas a su contexto. De forma complementaria, la app genera listas de
+   compras optimizadas para la semana, lo que permite al usuario abastecerse
+   de manera planificada, evitar el desperdicio y reducir su gasto en comida.
+
+g) How much (¿Cuánto?)
+   ¿Cuánto costará o qué recursos se requieren?
+   •   Recursos humanos: Equipo de desarrollo (programadores, analista).
+   •   Recursos tecnológicos: Servidores, base de datos, herramientas de
+       desarrollo.
+
+
+
+                                                                              10
+            •   Costo estimado: Variable según alcance (puede incluir desarrollo,
+                mantenimiento y despliegue).
+            •   Tiempo estimado: Entre 2 a 4 meses para una versión inicial (MVP).
+
+2.2.2)   Lean UX Process
+         2.2.2.1)   Lean UX Problem Statements
+                    Los estudiantes foráneos y jóvenes que viven solos deben gestionar
+                    su alimentación de manera autónoma, en un contexto de tiempo
+                    limitado, presupuesto reducido y escasa experiencia culinaria. Esta
+                    situación los lleva frecuentemente a no saber qué cocinar con los
+                    ingredientes que tienen disponibles, lo que deriva en dependencia de
+                    la comida rápida, gasto innecesario y desperdicio de alimentos.
+
+                    EasyLife AI parte del siguiente enunciado de problema: Los
+                    estudiantes foráneos y jóvenes que viven solos presentan dificultades
+                    para planificar y preparar sus comidas diarias debido a la falta de
+                    tiempo, la limitada experiencia culinaria y la ausencia de una guía
+                    adaptada a sus ingredientes y recursos disponibles. Esta situación
+                    genera un impacto negativo en su economía, salud y bienestar. Una
+                    solución exitosa debería permitirles decidir qué cocinar en segundos,
+                    usando lo que ya tienen en casa, con instrucciones claras y adaptadas
+                    a su nivel.
+
+         2.2.2.2)   Lean UX Assumptions
+                    •   Los usuarios no saben qué cocinar con los ingredientes que tienen
+                        disponibles en casa.
+                    •   Los usuarios disponen de poco tiempo para cocinar,
+                        especialmente entre semana.
+                    •   Los usuarios desean preparar comida casera pero no cuentan con
+                        recetas adaptadas a su contexto real.
+                    •   Los usuarios estarían dispuestos a usar una aplicación móvil que
+                        les sugiera recetas según sus ingredientes, tiempo y presupuesto.
+
+
+
+                                                                                      11
+           •   Los usuarios confiarían en las sugerencias automatizadas si estas
+               son prácticas, rápidas de leer y fáciles de seguir.
+           •   Los usuarios recurren a la comida rápida principalmente por
+               indecisión y falta de planificación, no solo por falta de habilidad.
+
+2.2.2.3)   Lean UX Hypothesis Statements
+           a) Hipótesis 1:
+               Creemos       que   proporcionar   recomendaciones     de   recetas
+               personalizadas basadas en los ingredientes disponibles, el tiempo
+               libre y el presupuesto del usuario permitirá a los estudiantes
+               foráneos y jóvenes que viven solos reducir su dependencia de la
+               comida rápida y mejorar su organización alimentaria. Sabremos
+               que esta hipótesis es válida cuando al menos el 70% de los
+               usuarios activos reporten haber cocinado con la app al menos tres
+               veces por semana y hayan reducido su frecuencia de pedidos de
+               comida rápida.
+
+           b) Hipótesis 2 :
+               Creemos que la función de lista de compras optimizada, generada
+               automáticamente a partir de las recetas planificadas para la
+               semana, incrementará la frecuencia de uso de la aplicación y
+               reducirá el gasto semanal en alimentación de los usuarios.
+               Sabremos que esto es cierto cuando al menos el 60% de los
+               usuarios que utilicen la función de planificación semanal reporten
+               un ahorro percibido en su gasto en comida respecto a semanas
+               anteriores.
+
+
+
+
+                                                                                12
+2.2.2.4)   Lean UX Canvas
+
+
+
+
+                            13
+3) CAPÍTULO II: Research
+  3.1)   Segmentos objetivo
+         a) Segmento objetivo 1: Estudiantes foráneos universitarios
+            Conformado por jóvenes de entre 17 y 26 años que migraron de su ciudad de origen
+            para realizar estudios universitarios en Lima u otras ciudades del Perú. Al vivir solos
+            o en habitaciones compartidas por primera vez, deben asumir de manera
+            independiente la gestión de su alimentación, presupuesto y organización diaria, sin el
+            apoyo familiar directo.
+
+            Los estudiantes foráneos suelen tener rutinas exigentes y horarios variables debido a
+            clases, trabajos de medio tiempo y actividades académicas. Como consecuencia,
+            disponen de poco tiempo para cocinar o planificar sus comidas, lo que los lleva
+            frecuentemente a consumir comida rápida, pedir delivery o realizar compras
+            impulsivas.
+            Entre sus principales características se encuentran:
+            •   Presupuesto mensual limitado destinado a alimentación, estimado entre S/ 300 y
+                S/ 600.
+            •   Escasa experiencia culinaria y dificultades para decidir qué cocinar.
+            •   Dependencia constante del teléfono móvil como herramienta de organización y
+                comunicación.
+            •   Necesidad de optimizar tiempo y gastos.
+            •   Interés por soluciones rápidas, prácticas y fáciles de usar.
+
+            Asimismo, este segmento presenta problemas relacionados con la falta de
+            planificación alimentaria, desperdicio de ingredientes y gastos innecesarios en
+            comida preparada.
+
+            Según la Universidad ESAN, menos de la mitad de los jóvenes peruanos mantiene
+            hábitos de ahorro, lo que evidencia dificultades en la gestión económica personal.
+            Además, estudios realizados por Universidad de Antioquia señalan que los
+            estudiantes universitarios presentan patrones de compra impulsiva asociados a la falta
+            de planificación y organización.
+
+
+
+                                                                                                14
+          Por ello, este segmento representa una oportunidad relevante para el desarrollo de una
+          solución tecnológica como EasyLife AI, orientada a simplificar la toma de decisiones
+          culinarias diarias mediante recomendaciones personalizadas basadas en ingredientes
+          disponibles, tiempo y presupuesto.
+
+3.2)   Competidores
+       a) Competidor 1: Cookpad
+          ▪   Cookpad es una red social de recetas fundada en Japón en 1998, con millones de
+              recetas publicadas por usuarios. Su propuesta es que los usuarios comparten sus
+              recetas y descubren las de otros. Sin embargo, no personaliza recomendaciones
+              según los ingredientes disponibles del usuario ni gestiona su presupuesto.
+          •   URL: https://cookpad.com
+
+       b) Competidor 2: Mealime
+          •   Mealime es una aplicación de planificación de comidas orientada principalmente
+              al mercado norteamericano. Genera menús semanales y listas de compras
+              automáticas, con enfoque en opciones saludables. Su debilidad principal es la
+              escasa adaptación al contexto latinoamericano, los ingredientes locales y las
+              necesidades de estudiantes con presupuesto reducido.
+          •   URL: https://www.mealime.com
+
+       c) Competidor 3: Rappi
+          •   Rappi es la plataforma de delivery líder en LATAM, que permite pedir comida
+              preparada, productos de supermercado y otros bienes. Representa una solución
+              inmediata al problema de "qué comer", pero no enseña a cocinar, no gestiona
+              ingredientes del hogar y resulta costosa a largo plazo para el segmento estudiantil.
+          •   URL: https://rappi.pe
+
+       d) Competidor 4: Yummly
+          •   Yummly es una aplicación de recetas con inteligencia artificial que personaliza
+              sugerencias según preferencias alimenticias. Permite filtrar por dieta, alergias y
+              tiempo de preparación. No incluye gestión de ingredientes disponibles ni
+              funciones para planificación de compras orientadas al ahorro.
+          •   URL: https://www.yummly.com
+
+                                                                                               15
+         3.3)     Análisis competitivo
+                  a) Pregunta del análisis
+                     ¿Cómo se diferencia EasyLife AI de las aplicaciones de recetas, planificación de
+                     comidas y delivery orientadas a alimentación diaria?
+
+
+                                      Competitive Analysis Landscape
+
+
+                                                  ¿Cómo se diferencia EasyLife AI de las aplicaciones de
+¿Por qué llevar a cabo este análisis?             recetas, planificación de comidas y delivery orientadas a
+                                                  alimentación diaria?
+
+
+                             EasyLife AI              Cookpa        Mealime           Rappi           Yummly
+     Categoría
+
+
+
+
+                            A plicación
+                            móvil con IA
+                                                  Red social App              de
+                            que                                                    Plataforma
+                                                  de     recetas planificación                     App de recetas
+                            recomienda                                             de delivery
+                                                  compartida     semanal      de                   personalizadas
+                Overview
+                            recetas según                                          y compras
+                                                  s          por comidas                           mediante IA.
+                            ingredientes,                                          online.
+                                                  usuarios       saludables
+                            tiempo        y
+Perfil
+                            presupuesto
+
+
+                           Personalizació
+                           n basada en
+                                                  Gran           Organización      Rapidez      y Recomendacio
+                           ingredientes
+                Ventaja                           comunidad      semanal        y facilidad        nes      según
+                           disponibles,
+            competitiva                           y variedad listas                para      pedir preferencias
+                           tiempo             y
+                                                  de recetas.    automáticas.      comida.         alimenticias.
+                           presupuesto
+                           del usuario.
+
+
+                                                                                                                   16
+                                                               Personas
+                         Estudiantes          Público                           Usuarios         Usuarios
+                                                               interesadas
+         Mercado         foráneos         y general                             que buscan interesados en
+                                                               en
+         objetivo        jóvenes        que interesado                          delivery         recetas
+                                                               alimentación
+Perfil                   viven solos.         en cocinar.                       rápido.          personalizadas
+                                                               saludable.
+ de
+Marke                                         Comunidad
+                         Redes
+ting                                          colaborativ
+                         sociales,                                              Publicidad
+         Estrategias                                           Marketing
+                                              a            y                    masiva       y Personalizació
+         de              enfoque         en                    enfocado en
+                                              contenido                         promocione       n y experiencia
+         marketing       ahorro           y                    vida
+                                              generado                          s                premium.
+                         practicidad                           saludable.
+                                              por                               constantes.
+                         estudiantil.
+                                              usuarios.
+
+                         Recetas
+                         inteligentes y Recetas
+                                                               Planificación    Delivery de Recetas
+                         personalisadas       compartida
+         Productos &                                           de comidas y comida           y inteligentes y
+                         ,   listas      de s              y
+         Servicios                                             listas        de supermerca       filtros
+                         compras          y comunidad
+                                                               compras.         do.              alimenticios.
+                         planificación        culinaria.
+                         semanal.
+Perfil
+ de                                           Gratuito         Suscripción      Pago        por Freemium con
+                         Modelo
+Produ                                         con              premium.         pedidos      y versión
+                         freemium con
+         Precios     &                        opciones                          delivery.        premium.
+ cto                     funciones
+         Costos                               premium.
+                         básicas
+                         gratuitas.
+
+         Canales de Aplicación
+                                              Aplicación                        Aplicación
+         distribución    móvil            y                    Aplicación                        Aplicación
+                                              móvil        y                    móvil        y
+         (Web            plataforma                            móvil.                            móvil y web.
+                                              web.                              web.
+         y/o Móvil)      web.
+
+                                                                                                                 17
+                       Adaptación al
+                       contexto                                             Rapidez      y
+                                           Amplia         Buena                              IA             y
+                       estudiantil,                                         gran
+         Fortalezas                        variedad de organización                          personalizació
+                       ahorro          y                                    cobertura
+                                           recetas        semanal.                           n avanzada.
+                       facilidad      de                                    en LATAM.
+                       uso.
+
+                                           No
+                                                          Poco              Alto costo a
+                       Startup nueva personaliza                                             Funciones
+                                                          adaptada       al largo plazo
+                       y   comunidad según                                                   limitadas para
+         Debilidades                                      contexto          y      poca
+                       pequeña             ingrediente                                       control        de
+Anális                                                    latinoamerica     educación
+                       inicialmente.       s reales del                                      presupuesto.
+  is                                                      no.               alimentaria.
+                                           usuario.
+SWO
+  T                    Crecimiento
+                                           Expansión      Incremento
+                       del uso de IA y                                      Expansión        Mayor
+         Oportunida                        de             de interés por
+                       apps           de                                    de delivery adopción de IA
+         des                               comunidad      vida
+                       organización                                         en LATAM. en cocina.
+                                           digital.       saludable.
+                       personal.
+
+                       Competidores
+                                           Nuevas                                            Competidores
+                       consolidados y                     Competencia       Saturación
+                                           apps con IA                                       con funciones
+         Amenazas      rápida                             de           apps del mercado
+                                           personaliza                                       más
+                       evolución                          gratuitas.        delivery.
+                                           da.                                               completas.
+                       tecnológica.
+
+
+
+
+                                                                                                             18
+3.4)   Estrategias y tácticas frente a competidores
+       a)   Estrategias frente a competidores de recetas (Cookpad, Yummly)
+            EasyLife AI se diferencia de las apps de recetas tradicionales mediante la
+            personalización por ingredientes disponibles. Mientras Cookpad y Yummly
+            requieren que el usuario busque una receta, EasyLife AI invierte el flujo: el usuario
+            ingresa lo que tiene y la app sugiere qué preparar. Esta funcionalidad resuelve el
+            principal pain point del segmento: la indecisión ante ingredientes disponibles.
+            •   Táctica: Implementar un onboarding que capture los ingredientes habituales del
+                usuario y demuestre la personalización desde la primera sesión.
+            •   Táctica: Incluir recetas con ingredientes de fácil acceso en bodegas y mercados
+                peruanos, diferenciándose de apps con ingredientes importados.
+
+       b) Estrategias frente a apps de planificación (Mealime)
+            Mealime planifica para familias en EE.UU. EasyLife AI apunta a un segmento
+            diferente: estudiantes foráneos en LATAM con presupuesto ajustado. La estrategia
+            es la localización: recetas con ingredientes accesibles, precios en soles, y porciones
+            para una persona.
+            •   Táctica: Adaptar el catálogo de recetas al contexto peruano y latinoamericano
+                con ingredientes de temporada y de bajo costo.
+            •   Táctica: Diseñar el planificador semanal para una persona, no para familias.
+
+       c)   Estrategias frente al delivery (Rappi)
+            Rappi es la solución de menor esfuerzo pero de mayor costo. EasyLife AI no compite
+            directamente, sino que ofrece una alternativa económicamente superior a mediano
+            plazo. La estrategia es demostrar el ahorro acumulado.
+            •   Táctica: Incluir en la app un comparador de costo "cocinar vs. pedir" para que
+                el usuario visualice cuánto ahorra usando EasyLife AI.
+
+       d) Estrategia frente a la amenaza de IA generativa (ChatGPT)
+            Las IAs generativas pueden sugerir recetas por texto, pero no tienen interfaz culinaria
+            dedicada, ni planificador, ni lista de compras integrada. EasyLife AI se diferencia
+            por la experiencia de usuario especializada y la integración de funciones.
+            •   Táctica: Desarrollar una UX intuitiva que incentive el uso diario y genere hábito
+                en el usuario.
+                                                                                                19
+3.5)   Entrevistas
+       3.5.1)   Diseño de entrevistas
+                Preguntas para segmento objetivo:
+                •    ¿De qué ciudad o región eres?
+                •    ¿Actualmente vives solo(a), con familiares o roommates?
+                •    ¿Qué actividades ocupan la mayor parte de tu tiempo?
+                •    ¿Te resulta difícil organizar tus tiempos entre estudios, alimentación y
+                     otras responsabilidades? ¿Por qué?
+                •    ¿Quién suele preparar tus alimentos diariamente?
+                •    ¿Con qué frecuencia cocinas?
+                •    ¿Qué dificultades tienes al momento de decidir qué cocinar o consumir?
+                •    ¿Qué haces normalmente cuando no tienes tiempo para cocinar?
+                •    ¿Consideras que tus hábitos alimenticios cambiaron desde que vives fuera
+                     de casa?
+                •    ¿Sueles organizar un presupuesto semanal o mensual para tus gastos?
+                •    ¿En qué aspectos consideras que gastas más dinero?
+                •    ¿Utilizas aplicaciones móviles para organizar tus actividades, compras o
+                     alimentación?
+                •    ¿Te resultaría útil una aplicación que te sugiera qué cocinar o comprar
+                     según tu presupuesto y tiempo disponible?
+                •    ¿Qué funciones te gustaría encontrar en una aplicación como EasyLife AI?
+
+       3.5.2)   Registro de entrevistas
+                a) Entrevista 1:
+                     •   Entrevistado: Azumi
+                     •   Edad: 18
+                     •   Ciudad de procedencia: Pucallpa
+                     •   Distrito de residencia: El Agustino
+                     •   Institución: UPC
+                     •   Ciclo: 5to
+                     •   Carrera: Ing. Industrial
+
+                                                                                                20
+   •   URL del video:
+       https://youtu.be/b13FyLDiQrM?si=KJEh8mcnfmCBkmao
+   •   Resumen: Azumi, estudiante foránea de Pucallpa que actualmente reside
+       en Lima, comentó que debido a sus estudios y la falta de tiempo suele
+       pedir comida rápida en lugar de cocinar. También mencionó que utiliza
+       inteligencia artificial para organizarse y que estaría dispuesta a pagar por
+       una aplicación que le ayude a planificar mejor su alimentación y tiempo.
+       Su experiencia respalda la propuesta de “EasyLife AI”, enfocada en
+       ayudar a estudiantes foráneos a organizar sus comidas de manera práctica
+       y económica.
+
+
+
+
+b) Entrevista 2:
+   •   Entrevistado: Yanela
+   •   Edad: 19
+   •   Ciudad de procedencia: Ica
+   •   Distrito de residencia: Ate
+   •   Institución: UPC
+   •   Ciclo: 4to
+   •   Carrera: Administración de Empresas
+
+
+                                                                                21
+   •   URL del video:
+       https://youtu.be/_by5IquGbbk?si=25MKSfXQUTpACETT
+   •   Resumen: Yanela, estudiante foránea proveniente de Ica que reside en
+       Lima, comentó que vive con dos roomies y realiza sus compras de
+       alimentos una vez por semana. Aunque se cocina sola y mantiene un
+       horario organizado en su celular, mencionó que suele pedir comida
+       rápida dos veces por semana y gasta aproximadamente 300 soles
+       mensuales en alimentación. Además, señaló que le gustaría llevar una
+       alimentación más saludable y estaría dispuesta a utilizar “EasyLife AI”
+       para organizar mejor su presupuesto y planificación de comidas.
+
+
+
+
+c) Entrevista 3:
+   •   Entrevistado: Joaquin
+   •   Edad: 18
+   •   Ciudad de procedencia: Cusco
+   •   Distrito de residencia: Surco
+   •   Institución: UPC
+   •   Ciclo: 3ro
+   •   Carrera: Ing. De Sistemas de Información
+   •   URL del video: https://youtu.be/taHjJkx8rT8?si=Oqdg-hWa5CPZzyZd
+
+                                                                           22
+   •   Resumen: Joaquín, estudiante foráneo proveniente de Cusco que reside
+       en Lima y vive con un roomie, comentó que le resulta difícil organizar
+       su alimentación, especialmente los desayunos, debido a la falta de
+       tiempo. Por ello, suele comprar menús en la universidad y gasta
+       aproximadamente 200 soles semanales en comida, aunque no se siente
+       cómodo invirtiendo tanto en opciones poco saludables. Además,
+       mencionó que sí utilizaría “EasyLife AI”, ya que considera que le
+       ayudaría a organizarse mejor, ahorrar dinero y reducir una preocupación
+       diaria.
+
+
+
+
+d) Entrevista 4:
+   •   Entrevistado: Brenda
+   •   Edad: 19
+   •   Ciudad de procedencia: Ayacucho
+   •   Distrito de residencia: Molina
+   •   Institución: UPC
+   •   Ciclo: 4to
+   •   Carrera: Ing. Software
+   •   URL del video: https://youtu.be/fVogl-0Vi_Q?si=JfZutdoikW0RdKNz
+
+                                                                           23
+            •   Resumen: Brenda, estudiante foránea de Ayacucho que reside en Lima y
+                vive sola, comentó que prefiere pasar la mayor parte del tiempo en la
+                universidad, ya que no suele cocinar. Aunque ha intentado planificar sus
+                horarios de comida y organizarse mejor, mencionó que no obtuvo buenos
+                resultados. Además, señaló que gasta aproximadamente 100 soles
+                semanales en alimentación y utiliza ChatGPT para organizar aspectos de
+                su vida cotidiana. Durante la entrevista, indicó que sí usaría “EasyLife
+                AI” para mejorar su organización alimentaria, aunque no está
+                completamente segura de pagar por la aplicación.
+
+
+
+
+3.5.3)   Análisis de entrevistas
+         Las entrevistas realizadas a estudiantes foráneos que residen en Lima
+         permitieron identificar que muchos presentan dificultades para organizar su
+         alimentación debido a la falta de tiempo y la carga académica, por lo que suelen
+         recurrir a comida rápida o menús universitarios con frecuencia. Además, varios
+         entrevistados mencionaron que desean mejorar sus hábitos alimenticios y
+         administrar mejor sus gastos, pero tienen problemas para mantener una
+         planificación constante. También se observó un interés general en utilizar
+         “EasyLife AI” como una herramienta que les ayude a organizar sus comidas,
+         horarios y presupuesto, ya que consideran que podría facilitar su rutina diaria y
+         reducir el estrés relacionado con la alimentación.
+                                                                                       24
+                Estos resultados confirman las hipótesis Lean UX del equipo: la indecisión sobre
+                qué cocinar (no la falta de habilidad) y la falta de tiempo son los principales
+                factores que llevan al segmento a depender del delivery y la comida rápida. Los
+                gráficos de frecuencia elaborados muestran que el 100% recurre a comida rápida
+                o menús, el 100% estaría dispuesto a usar EasyLife AI y el 75% estaría dispuesto
+                a pagar por ella.
+
+
+
+
+3.6)   Requirements Elicitation & Analysis
+       3.6.1)   Needfinding
+                El proceso de Needfinding de EasyLife AI se basó en el análisis profundo de las
+                cuatro entrevistas realizadas al segmento objetivo y en el estudio del
+                comportamiento de los competidores. A través de este proceso se identificaron
+                las necesidades reales, motivaciones y frustraciones de los estudiantes foráneos
+                universitarios en relación con su alimentación diaria.
+                Las principales necesidades identificadas son:
+                a) Necesidades funcionales:
+                   •   Obtener sugerencias de recetas personalizadas según los ingredientes
+                       disponibles en casa.
+
+                                                                                             25
+            •   Conocer el tiempo de preparación estimado de cada receta para decidir
+                si es viable en el momento.
+            •   Generar listas de compras optimizadas a partir de un plan semanal de
+                comidas.
+            •   Recibir instrucciones paso a paso, claras y adaptadas al nivel de
+                experiencia culinaria del usuario.
+            •   Controlar y visualizar el gasto semanal en alimentación.
+
+         b) Necesidades no funcionales:
+            •   La aplicación debe ser rápida: el usuario necesita una respuesta en menos
+                de 3 segundos.
+            •   La interfaz debe ser intuitiva y usable sin necesidad de tutoriales
+                extensos.
+            •   El sistema debe funcionar con conexión mínima o en modo offline para
+                algunas funciones básicas.
+            •   La aplicación debe estar disponible en Android e iOS.
+
+3.6.2)   User Personas por cada segmento objetivo
+
+
+
+
+                                                                                      26
+3.6.3)   User Task Matrix
+         La siguiente tabla concentra las tareas que Valeria Torres realiza para cumplir
+         sus objetivos de alimentación diaria, independientemente de la existencia de una
+         solución de software:
+
+
+                             Tarea                        Frecuencia      Importancia
+
+          Decidir qué comer cada día                         Alta            Alta
+
+          Revisar qué ingredientes tiene disponibles        Media            Alta
+          en casa
+
+          Buscar recetas en internet o redes sociales       Media           Media
+
+          Ir al supermercado o bodega a comprar             Media            Alta
+          alimentos
+
+          Preparar lista de compras antes de salir           Baja           Media
+
+          Cocinar en casa                                   Media            Alta
+
+          Pedir comida por delivery                          Alta           Media
+
+          Controlar el gasto semanal en alimentación        Media            Alta
+
+          Planificar comidas para la semana                  Baja            Alta
+
+          Buscar     opciones     económicas         de      Alta            Alta
+          alimentación
+
+
+
+
+                                                                                        27
+          3.6.4)   Empathy Maps
+
+
+
+
+4) CAPÍTULO III: Requirements Specification
+   4.1)   As-Is Scenario Mapping
+          El As-Is Scenario Mapping representa el flujo actual del estudiante foráneo al gestionar
+          su alimentación diaria sin contar con EasyLife AI. Fue elaborado a partir de los hallazgos
+          de las cuatro entrevistas realizadas:
+
+
+
+
+                                                                                                 28
+4.2)   To-Be Scenario Mapping
+       El To-Be Scenario Mapping proyecta la experiencia del estudiante foráneo al gestionar
+       su alimentación diaria con el apoyo de EasyLife AI. Los cambios más significativos
+       respecto al As-Is ocurren en las fases de Búsqueda, Decisión y Compras, donde la app
+       interviene:
+
+
+
+
+4.3)   Epics
+
+
+Epic                                                                                  Relacionado
+            Titulo              Descripción                      Criterio
+ ID                                                                                       con
+
+
+                          Permite      al     usuario
+                                                         El    sistema         debe     HU01
+        Gestión      de   registrar,     editar     y
+                                                         recomendar         recetas     HU02
+EP01    Ingredientes      consultar recetas según
+                                                         compatibles     con    los     HU03
+        y Recetas         los           ingredientes
+                                                         ingredientes del usuario       HU04
+                          disponibles
+
+
+                          Permite           planificar
+                                                         El sistema debe generar        HU05
+                          comidas semanales y
+        Compras                                          y permitir editar listas       HU06
+EP02                      gestionar      listas    de
+        Inteligentes                                     de compras basadas en          HU07
+                          compras       de     forma
+                                                         el plan semanal                HU08
+                          automática
+
+                                                                                               29
+EP03   Presupuesto       Permite      configurar      un El sistema debe alertar al        HU09
+                         presupuesto        mensual     y usuario        cuando      se    HU10
+                         registrar         gastos      de acerque o supere su límite       HU11
+                         alimentación                      de gasto
+EP04   Gestión        de Permite       el        registro, El        sistema      debe     HU12
+       usuarios          autenticación y gestión de garantizar acceso seguro               HU13
+                         cuentas de usuario en la y personalizado a cada                   HU14
+                         plataforma                        usuario                         HU15
+EP05   Módulo         de Permite      realizar      pagos El sistema debe procesar         HU16
+       Pago              mediante                distintos pagos de forma segura y         HU17
+                         métodos para acceder a confirmar la suscripción                   HU18
+                         funciones premium                                                 HU19
+                                                                                           HU20
+EP06   Módulo         de Permite enviar alertas y El sistema debe enviar                   HU21
+       Notificaciones recordatorios al usuario notificaciones oportunas                    HU22
+                         sobre                 comidas, según la configuración             HU23
+                         ingredientes                   y del usuario                      HU24
+                         planificación
+EP07   Reportes          Permite visualizar reportes El sistema debe mostrar               HU25
+       analíticos del de         gastos,     ahorro     y datos       actualizados     y   HU26
+       Usuario           nutrición para mejorar la filtrados por período                   HU27
+                         toma de decisiones
+EP08   APIs              Permite integrar servicios El               sistema      debe     HU28
+                         externos     como       Google conectarse correctamente           HU29
+                         Maps y WhatsApp                   con las APIs externas y         HU30
+                                                           mostrar resultados útiles
+EP09   Motor          de Permite                 generar El          sistema      debe     HU31
+       Inteligencia      recomendaciones                y recomendar           recetas     HU32
+       Artificial        adaptaciones de recetas relevantes según el perfil                HU33
+                         personalizadas con IA             e ingredientes del usuario
+
+
+
+                                                                                                  30
+4.4)   User Stories
+
+
+        Historia de Usuario      HU01
+        Autor                    Diego
+        Fecha creación           09/06/26              Fecha modificación     09/06/26
+
+
+       a) Historia de Usuario
+               Sección                                   Contenido
+        Yo como              Usuario de EasyLife AI
+        Quiero               Registrar los ingredientes disponibles en mi hogar
+        Para                 Mantener actualizada mi despensa virtual y recibir
+                             recomendaciones de recetas
+
+
+       b) Funcionalidades
+         N°                                         Detalle
+        F-01      El sistema permite registrar nuevos ingredientes
+        F-02      El usuario puede ingresar la cantidad y unidad de medida del ingrediente
+        F-03      El sistema permite registrar la fecha de vencimiento del producto
+        F-04      El sistema almacena los ingredientes asociados al usuario
+
+
+       c) Reglas de negocio
+          N°                                          Detalle
+        RN-01      Todo ingrediente debe estar asociado a un usuario registrado
+        RN-02      El nombre del ingrediente es un campo obligatorio
+        RN-03      La cantidad registrada debe ser mayor a cero
+        RN-04      La fecha de vencimiento no puede ser menor a la fecha actual
+
+
+
+
+                                                                                             31
+d) Detalle de campos
+ N°       Tipo objeto   Nombre objeto           Valor              Consideraciones
+ 1    INPUT             Nombre del         Texto libre         Campo obligatorio
+      TEXT              ingrediente
+ 2    INPUT             Cantidad           Número              Debe ser mayor a cero
+      NUMBER
+ 3    SELECT            Unidad de          Kg, g, L, ml,       Campo obligatorio
+                        medida             unidades
+ 4    INPUT             Fecha de           DD/MM/YYYY Opcional según el
+      DATE              vencimiento                            producto
+
+
+e) Modelo de datos
+              Dato                                         Tipo
+ id_ingrediente                  int
+ id_usuario                      int
+ nombre                          varchar
+ cantidad                        decimal
+ unidad_medida                   varchar
+ fecha_vencimiento               date
+
+
+f) Criterios de aceptación
+     N°                                        Detalle
+ CA-01       Dado que el usuario ingresa datos válidos, cuando selecciona registrar,
+             entonces el sistema guarda el ingrediente correctamente
+ CA-02       Dado que el nombre del ingrediente está vacío, cuando intenta registrarlo,
+             entonces el sistema muestra un mensaje de error
+ CA-03       Dado que la cantidad es menor o igual a cero, cuando guarda el ingrediente,
+             entonces el sistema no permite el registro
+ CA-04       Dado que el ingrediente fue registrado correctamente, cuando el usuario
+             accede a su despensa, entonces puede visualizarlo
+
+
+                                                                                          32
+ Historia de Usuario      HU02 – Editar Ingredientes
+ Autor                    Diego
+ Fecha creación           09/06/26              Fecha modificación    09/06/26
+
+
+a) Historia de Usuario
+        Sección                                   Contenido
+ Yo como              Usuario de EasyLife AI
+ Quiero               Modificar la información de mis ingredientes registrados
+ Para                 Mantener actualizada la información de mi despensa virtual
+
+
+b) Funcionalidades
+  N°                                         Detalle
+ F-01      El sistema permite editar el nombre del ingrediente
+ F-02      El sistema permite actualizar cantidades y unidades de medida
+ F-03      El usuario puede modificar la fecha de vencimiento
+ F-04      El sistema guarda los cambios realizados
+
+
+c) Reglas de negocio
+   N°                                          Detalle
+ RN-01      Solo el propietario del ingrediente puede modificarlo
+ RN-02      La cantidad actualizada debe ser mayor a cero
+ RN-03      El nombre del ingrediente no puede quedar vacío
+ RN-04      Los cambios realizados deben registrarse correctamente en el sistema
+
+
+
+
+                                                                                   33
+d) Detalle de campos
+ N°       Tipo          Nombre               Valor                 Consideraciones
+          objeto         objeto
+ 1    INPUT          Nombre del        Texto libre            Permite actualizar el
+      TEXT           ingrediente                              nombre
+ 2    INPUT          Cantidad          Número                 Debe ser mayor a cero
+      NUMBER
+ 3    SELECT         Unidad de         Kg, g, L, ml,          Permite modificar la unidad
+                     medida            unidades
+ 4    INPUT          Fecha de          DD/MM/YYYY             Puede ser actualizada
+      DATE           vencimiento
+
+
+e) Modelo de datos
+              Dato                                       Tipo
+ id_ingrediente                  int
+ id_usuario                      int
+ nombre                          varchar
+ cantidad                        decimal
+
+
+f) Criterios de aceptación
+     N°                                       Detalle
+ CA-01      Dado que el usuario modifica un ingrediente, cuando guarda los cambios,
+            entonces el sistema actualiza la información correctamente
+ CA-02      Dado que se ingresa una cantidad inválida, cuando intenta guardar los
+            cambios, entonces el sistema muestra un mensaje de error
+ CA-03      Dado que el usuario no es propietario del ingrediente, cuando intenta
+            editarlo, entonces el sistema deniega el acceso
+ CA-04      Dado que los cambios se realizan correctamente, cuando el usuario
+            consulta su despensa, entonces visualiza la información actualizada
+
+
+
+                                                                                        34
+ Historia de Usuario         HU03
+ Autor                       Camila
+ Fecha creación              08/06/2026         Fecha modificación        08/06/2026
+
+
+a) Historia de Usuario
+ Sección               Contenido
+ Yo como               Estudiante foráneo o joven que vive solo
+ Quiero                Consultar recetas recomendadas según mis ingredientes
+                       disponibles
+ Para                  Decidir rápidamente qué cocinar sin perder tiempo buscando
+                       opciones
+
+
+b) Funcionalidades
+  N°                                          Detalle
+ F-01      Permitir ingresar o seleccionar los ingredientes disponibles
+ F-02      Mostrar una lista de recetas recomendadas según los ingredientes registrados
+ F-03      Mostrar tiempo estimado de preparación de cada receta
+ F-04      Permitir visualizar información general de la receta antes de seleccionarla
+
+
+c) Reglas de negocio
+   N°                                          Detalle
+ RN-01      Las recetas recomendadas deben utilizar al menos un ingrediente registrado
+            por el usuario
+ RN-02      Las recomendaciones deben estar asociadas al perfil del usuario
+ RN-03      El sistema debe mostrar únicamente recetas activas disponibles en la base
+            de datos
+ RN-04      Las recetas deben ordenarse según el nivel de coincidencia con los
+            ingredientes disponibles
+
+
+
+
+                                                                                         35
+d) Detalle de campos
+ N°       Tipo objeto   Nombre objeto          Valor               Consideraciones
+ 1    INPUT             Ingredientes        Texto/Lista     Permite seleccionar varios
+                        disponibles                         ingredientes
+ 2    LISTA             Recetas             Lista de        Se genera automáticamente
+                        recomendadas        recetas
+ 3    TEXT              Tiempo de           Minutos         Visible en cada receta
+                        preparación
+ 4    BUTTON            Ver receta          N/A             Muestra el detalle de la receta
+
+e) Modelo de datos
+              Dato                                          Tipo
+ id_receta                        Int
+ nombre_receta                    String
+ descripcion                      String
+ tiempo_preparacion               Int
+ ingredientes                     String
+ nivel_coincidencia               Decimal
+
+f) Criterios de aceptación
+     N°                                           Detalle
+ CA-01        Dado que el usuario registra ingredientes, cuando solicite recomendaciones,
+              entonces el sistema deberá mostrar recetas compatibles
+ CA-02        Dado que existen recetas compatibles, cuando se generen recomendaciones,
+              entonces el sistema deberá mostrarlas en una lista
+ CA-03        Dado que una receta es mostrada, cuando el usuario la visualice, entonces
+              deberá ver el tiempo estimado de preparación
+ CA-04        Dado que el usuario selecciona una receta, cuando presione "Ver receta",
+              entonces el sistema deberá mostrar su información general
+ CA-05        Dado que no existan recetas compatibles, cuando el usuario solicite
+              recomendaciones, entonces el sistema deberá mostrar un mensaje
+
+                                                                                              36
+ Historia de Usuario      HU04
+ Autor                    Camila
+ Fecha creación           08/06/2026             Fecha modificación      08/06/2026
+
+
+a) Historia de Usuario
+ Sección               Contenido
+ Yo como               Usuario de EasyLife AI
+ Quiero                Ver la preparación paso a paso de una receta
+ Para                  Cocinar correctamente, aunque tenga poca experiencia culinaria
+
+
+b) Funcionalidades
+  N°                                          Detalle
+ F-01      Mostrar los pasos de preparación de la receta seleccionada
+ F-02      Mostrar los ingredientes necesarios para la receta
+ F-03      Mostrar el tiempo estimado de preparación
+ F-04      Permitir navegar entre los pasos de la receta
+
+
+c) Reglas de negocio
+   N°                                           Detalle
+ RN-01      Solo pueden visualizarse recetas registradas en el sistema
+ RN-02      Los pasos deben mostrarse en el orden establecido para la receta
+ RN-03      Cada receta debe contener al menos un paso de preparación
+ RN-04      La información mostrada debe corresponder a la receta seleccionada por el
+            usuario
+
+
+
+
+                                                                                        37
+d) Detalle de campos
+ N°       Tipo           Nombre             Valor              Consideraciones
+          objeto          objeto
+ 1    TEXT           Nombre receta       Texto         Solo lectura
+ 2    LISTA          Ingredientes        Lista         Muestra ingredientes requeridos
+ 3    TEXT           Paso de             Texto         Se muestra secuencialmente
+                     preparación
+ 4    BUTTON         Siguiente paso      N/A           Permite avanzar entre pasos
+
+
+e) Modelo de datos
+             Dato                                          Tipo
+ id_receta                      Int
+ nombre_receta                  String
+ ingrediente                    String
+ numero_paso                    Int
+ descripcion_paso               String
+ tiempo_preparacion             Int
+
+
+f) Criterios de aceptación
+     N°                                          Detalle
+ CA-01       Dado que el usuario selecciona una receta, cuando acceda a ella, entonces
+             el sistema deberá mostrar sus ingredientes
+ CA-02       Dado que existe una receta válida, cuando el usuario la abra, entonces el
+             sistema deberá mostrar los pasos de preparación en orden
+ CA-03       Dado que el usuario visualiza una receta, cuando consulte la información,
+             entonces deberá visualizar el tiempo estimado de preparación
+ CA-04       Dado que existen varios pasos, cuando el usuario presione "Siguiente",
+             entonces el sistema deberá mostrar el paso correspondiente
+ CA-05       Dado que la receta no tenga información disponible, cuando el usuario
+             intente visualizarla, entonces el sistema deberá mostrar un mensaje de error
+
+                                                                                         38
+ Historia de Usuario      HU05
+ Autor                    Franco
+ Fecha creación           07/06/2026           Fecha modificación       07/06/2026
+
+
+a) Historia de Usuario
+ Sección              Contenido
+ Yo como              Joven que vive solo y desea organizar su alimentación
+ Quiero               Planificar comidas semanales
+ Para                 Tener mejor organización en mis alimentos y ahorrar tiempo
+
+
+b) Funcionalidades
+  N°                                         Detalle
+ F-01      Permitir crear un plan de comidas para cada día de la semana
+ F-02      Permitir asignar recetas a desayuno, almuerzo y cena
+ F-03      Mostrar un calendario semanal con las comidas planificadas
+ F-04      Poder editar comidas del plan semanal
+
+
+c) Reglas de negocio
+   N°                                         Detalle
+ RN-01      Cada día de la semana puede tener varias comidas asignadas
+ RN-02      Solo se pueden asignar recetas registradas en el sistema
+ RN-03      Los cambios realizados deben guardarse automáticamente
+ RN-04      El plan semanal debe estar asociado solo a un usuario
+
+
+
+
+                                                                                     39
+d) Detalle de campos
+ N°       Tipo objeto       Nombre                Valor            Consideraciones
+                             objeto
+ 1    SELECT            Día de la           Lunes a            Campo obligatorio
+                        semana              Domingo
+ 2    SELECT            Tipo de             Desayuno,          Campo obligatorio
+                        comida              Almuerzo, Cena
+ 3    DROPDOWN Receta                       Nombre de          Solo muestra recetas
+                                            receta             registradas
+ 4    BUTTON            Guardar             N/A                Registra o actualiza el
+                        planificación                          plan semanal..
+
+
+e) Modelo de datos
+              Dato                                          Tipo
+ idPlan                           Int
+ Día_Semana                       String
+ Tipo_comida                      String
+ Nombre_receta                    String
+ Idusuario                        Int
+
+
+f) Criterios de aceptación
+     N°                                           Detalle
+ CA-01       El usuario debe poder crear un plan de comidas para los siete días de la
+             semana
+ CA-02       El sistema debe permitir asignar una receta a cada tipo de comida
+ CA-03       El sistema debe mostrar el plan semanal en forma de calendario o tabla
+ CA-04       El usuario debe poder modificar o eliminar cualquier comida planificada
+ CA-05       Los cambios realizados en el plan semanal deben guardarse y mostrarse al
+             volver a ingresar al sistema
+
+
+
+                                                                                         40
+ Historia de Usuario      HU06
+ Autor                    Franco
+ Fecha creación           07/06/2026             Fecha modificación      07/06/2026
+
+
+a) Historia de Usuario
+ Sección               Contenido
+ Yo como               Usuario de EasyLife AI
+ Quiero                Generar un listado de compras
+ Para                  No tener que pensar en todos los ingredientes uno por uno
+
+
+b) Funcionalidades
+  N°                                          Detalle
+ F-01      Permitir seleccionar una o varias recetas
+ F-02      Generar automáticamente la lista de ingredientes necesarios
+ F-03      Reunir diferentes ingredientes en una sola entrada
+ F-04      Permitir descargar o imprimir la lista de compras
+
+
+c) Reglas de negocio
+   N°                                           Detalle
+ RN-01      La lista debe tener solo los ingredientes de las recetas seleccionadas
+ RN-02      Los ingredientes repetidos deben agruparse y sumar sus cantidades
+ RN-03      Los ingredientes deben ser organizados por categoría
+ RN-04      La lista debe actualizarse automáticamente cuando el usuario agregue o
+            elimine recetas
+
+
+
+
+                                                                                      41
+d) Detalle de campos
+ N°       Tipo objeto      Nombre objeto          Valor                  Consideraciones
+ 1    CHECKBOX Seleccionar                     Sí / No         Permite elegir una o varias
+                           receta                              recetas
+ 2    LABEL                Ingrediente         Texto           Generado automáticamente
+                                                               según las recetas seleccionadas
+ 3    CHECKBOX Estado de                       Comprado /      Permite marcar los
+                           compra              Pendiente       ingredientes comprados
+ 4    BUTTON               Exportar lista      N/A             Permite descargar la lista de
+                                                               compras
+
+e) Modelo de datos
+              Dato                                             Tipo
+ Ingrediente                        String
+ Cantidad                           Decimal
+ Unidad de medida                   Decimal
+ Categoria                          String
+ Estado de compra                   Booleano
+
+
+f) Criterios de aceptación
+     N°                                              Detalle
+ CA-01        El sistema debe permitir seleccionar una o más recetas para generar la lista
+              de compras
+ CA-02        El sistema debe mostrar automáticamente todos los ingredientes necesarios
+              de las recetas seleccionadas.
+ CA-03        El sistema debe agrupar los ingredientes repetidos y sumar sus cantidades
+              correspondiente
+ CA-04        El usuario debe poder marcar los ingredientes como comprados o
+              pendientes
+ CA-05        El sistema debe permitir exportar, descargar o imprimir la lista de compras
+              generada
+                                                                                               42
+ Historia de Usuario       HU07
+ Autor                     Joaquin Alejandro Sanchez Espejo
+ Fecha creación            05/06/2026             Fecha modificación    05/06/2026
+
+a) Historia de Usuario
+ Sección                Contenido
+ Yo como                Joven que vive solo y desea organizar su alimentación
+ Quiero                 Editar mi lista de compras
+ Para                   Ajustar los productos según mis necesidades y presupuesto antes
+                        de realizar la compra
+
+b) Funcionalidades
+     N°                                         Detalle
+ F-01       Agregar nuevos productos a la lista de compras,
+ F-02       Modificar la cantidad de producto existente,
+ F-03       Eliminar producto de la lista de compras,
+ F-04       Guardar los cambios realizados en la lista.
+
+c) Reglas de negocio
+     N°                                         Detalle
+ RN-01       Solo usuarios registrados pueden editar su lista de compras.
+ RN-02       La cantidad de producto debe ser mayor a cero.
+ RN-03       No se permite guardar productos con nombres vacíos.
+ RN-04       El sistema debe conservar los cambios realizados en la lista hasta que el
+             usuario los modifique nuevamente.
+
+d) Detalle de campos
+ N°       Tipo objeto     Nombre objeto           Valor            Consideraciones
+ 1        TEXT           Nombre del          Arroz, leche,    Campo obligatorio, no
+                         producto            huevo, etc.      debe estar vacío.
+
+
+
+
+                                                                                         43
+ 2    INPUT             Cantidad del          1, 2, 3, etc.       Solo permite números
+      NUMBER            producto                                  mayores a cero.
+ 3    BUTTON            Guardar               Botón para          Guarda las modificaciones
+                        cambios               confirmar la        realizadas por el usuario.
+                                              edición de lista
+ 4    INDICADOR         Estado de             Cambios             Muestra un mensaje de
+                        modificación          guardados           confirmación o error
+                                              correctamente       después de editar la lista.
+
+e) Modelo de datos
+              Dato                                            Tipo
+ idLista                        Int
+ idUsuariio                     Int
+ nombreProducto                 String
+ cantidad                       Int
+ estadoProducto                 Boolean
+ fechaActualizacion             DateTime
+
+f) Criterios de aceptación
+     N°                                          Detalle
+ CA-01      Dado que el usuario accede a su lista de compras, cuando agregue un
+            producto válido, entonces el sistema deberá incorporarlo a la lista.
+ CA-02      Dado que existe un producto en la lista, cuando el usuario modifique la
+            cantidad,   entonces      el   sistema   deberá      actualizar   la   información
+            correctamente.
+ CA-03      Dado que existe un producto en la lista, cuando el usuario elimine un
+            producto, entonces el sistema deberá retirarlo de la lista.
+ CA-04      Dado que el usuario realiza cambios válidos, cuando seleccione la opción
+            guardar, entonces el sistema deberá almacenar las modificaciones realizadas.
+ CA-05      Dado que el usuario ingresa datos inválidos, cuando intente guardar los
+            cambios, entonces el sistema deberá mostrar un mensaje de error problemas
+
+                                                                                                44
+ Historia de Usuario       HU08
+ Autor                     Joaquin
+ Fecha creación            05/06/2026            Fecha modificación      05/06/2026
+
+a) Historia de Usuario
+ Sección                Contenido
+ Yo como                Joven que vive solo y desea organizar su alimentación
+ Quiero                 Marcar productos como comprados
+ Para                   Llevar un control de los productos adquiridos y de los que aun
+                        faltan comprar.
+
+b) Funcionalidades
+     N°                                       Detalle
+ F-01       Marcar un producto como comprado.
+ F-02       Visualizar el estado de cada producto (comprado o pendiente).
+ F-03       Desmarcar un producto comprado en caso de error.
+ F-04       Actualizar automáticamente el estado del producto en la lista de compras.
+
+c) Reglas de negocio
+     N°                                        Detalle
+ RN-01       Solo los usuarios registrados pueden modificar el estado de los productos.
+ RN-02       Un producto solo puede tener dos estados: comprado o pendiente.
+ RN-03       El cambio de estado debe registrarse inmediatamente en la lista.
+ RN-04       El sistema debe conservar el estado de los productos hasta que el usuario lo
+             modifique nuevamente.
+
+d) Detalle de campos
+ N°       Tipo objeto      Nombre             Valor              Consideraciones
+                            objeto
+ 1        TEXT          Nombre del        Arroz, leche,    Muestra el producto
+                        producto          huevos, etc.     registrado en la lista.
+
+
+                                                                                          45
+ 2    INDICADOR Estado del               Comprado /      Permite visualizar el estado
+                       producto          Pendiente       actual de cada producto.
+ 3    BUTTON           Marcar como       Confirmar       Cambia el estado del
+                       comprado          compra          producto de pendiente a
+                                                         comprado.
+ 4    BUTTON           Desmarcar         Quitar compra   Permite volver a cambiar el
+                       producto                          estado en caso de error.
+
+e) Modelo de datos
+              Dato                                       Tipo
+ idProducto                    Int
+ idLista                       Int
+ nombreProducto                String
+ estadoProducto                Boolean
+ fechaActualizacion            DateTime
+
+f) Criterios de aceptación
+     N°                                       Detalle
+ CA-01     Dado que existe un producto pendiente en la lista, cuando el usuario lo
+           marque como comprado, entonces el sistema deberá actualizar su estado a
+           comprado.
+ CA-02     Dado que un producto está marcado como comprado, cuando el usuario
+           consulte la lista, entonces el sistema deberá mostrar visualmente el estado.
+ CA-03     Dado que un producto fue marcado incorrectamente como comprado,
+           cuando el usuario lo desmarque, el sistema deberá cambiar su estado.
+ CA-04     Dado que el usuario modifica el estado de un producto, cuando se guarde el
+           cambio, el sistema deberá actualizar la información correctamente.
+ CA-05     Dado que ocurre un error al actualizar el estado de un producto, cuando el
+           usuario intente realizar la acción, entonces el sistema deberá mostrar un
+           mensaje de error.
+
+
+
+                                                                                        46
+ Historia de Usuario         HU09
+ Autor                       Sheyla Ventocilla Sanchez
+ Fecha creación              09/06/2026          Fecha modificación       09/06/2026
+
+
+a) Historia de Usuario
+ Sección                Contenido
+ Yo como                Estudiante foráneo
+ Quiero                 Configurar un presupuesto mensual
+ Para                   Administrar mejor el dinero destinado a mi alimentación
+
+
+b) Funcionalidades
+     N°                                        Detalle
+ F-01       El sistema permite ingresar un monto de presupuesto mensual
+ F-02       El sistema permite modificar el presupuesto configurado
+ F-03       El sistema muestra el saldo disponible del presupuesto
+ F-04       El sistema genera alertas cuando el usuario se acerca al límite establecido
+
+
+c) Reglas de negocio
+     N°                                         Detalle
+ RN-01       Cada usuario puede tener un único presupuesto mensual activo
+ RN-02       El monto del presupuesto debe ser mayor a cero
+ RN-03       Solo el usuario propietario puede modificar su presupuesto
+ RN-04       El saldo disponible debe actualizarse automáticamente según los gastos
+             registrados
+
+
+d) Detalle de campos
+ N°       Tipo objeto         Nombre                Valor              Consideraciones
+                              objeto
+ 1        INPUT            Presupuesto    S/. XX.XX                   Campo obligatorio
+          NUMBER           mensual
+
+                                                                                          47
+ 2    TEXT /          Saldo               S/. XX.XX                Calculado
+      NÚMERO          disponible                                   automáticamente
+ 3    BUTTON          Guardar             N/A                      Registra la
+                      presupuesto                                  configuración
+ 4    INDICADOR Estado del                Normal / Advertencia /   Actualización
+                      presupuesto         Excedido                 automática
+
+
+e) Modelo de datos
+              Dato                                        Tipo
+ id_presupuesto                 int
+ id_usuario                     int
+ monto_presupuesto              decimal
+ saldo_disponible               decimal
+ fecha_registro                 date
+
+
+f) Criterios de aceptación
+     N°                                         Detalle
+ CA-01     Dado que el usuario ingresa un monto válido, cuando selecciona "Guardar
+           presupuesto", entonces el sistema registra la configuración
+ CA-02     Dado que existe un presupuesto configurado, cuando el usuario modifica el
+           monto, entonces el sistema actualiza la información
+ CA-03     Dado que se registran gastos, cuando el sistema recalcula el presupuesto,
+           entonces muestra el saldo disponible actualizado
+ CA-04     Dado que el usuario alcanza el límite de advertencia definido, cuando
+           consulta su presupuesto, entonces el sistema muestra una alerta
+ CA-05     Dado que el usuario supera el presupuesto establecido, cuando visualiza su
+           estado financiero, entonces el sistema muestra una notificación de exceso
+
+
+
+
+                                                                                       48
+ Historia de Usuario       HU10
+ Autor                     Sheyla Ventocilla Sanchez
+ Fecha creación            09/06/2026             Fecha modificación       09/06/2026
+
+
+a) Historia de Usuario
+ Sección                Contenido
+ Yo como                Joven que vive solo y desea controlar sus gastos
+ Quiero                 Registrar mis gastos en alimentación
+ Para
+                        Llevar un seguimiento de cuánto dinero gasto diariamente
+
+
+b) Funcionalidades
+     N°                                        Detalle
+ F-01       El sistema permite registrar un nuevo gasto de alimentación
+ F-02       El sistema permite seleccionar una categoría para el gasto realizado
+ F-03       El sistema permite consultar el historial de gastos registrados
+ F-04       El sistema permite eliminar registros incorrectos de gastos
+
+
+c) Reglas de negocio
+     N°                                         Detalle
+ RN-01       Todo gasto registrado debe tener un monto mayor a cero
+ RN-02       Cada gasto debe pertenecer a una categoría definida por el sistema
+ RN-03       Los gastos solo pueden ser visualizados por el usuario que los registró
+ RN-04       El registro de gastos debe actualizar automáticamente los reportes
+             financieros
+
+
+d) Detalle de campos
+ N° Tipo objeto        Nombre objeto               Valor              Consideraciones
+ 1        INPUT        Monto del          S/. XX.XX                 Campo obligatorio
+          NUMBER       gasto
+
+
+                                                                                        49
+ 2    SELECTOR Categoría                   Mercado / Delivery /      Campo obligatorio
+                                           Menú universitario /
+                                           Otro
+ 3    DATE             Fecha del gasto     DD/MM/YYYY                Puede ser modificada
+ 4    BUTTON           Registrar gasto     N/A                       Guarda la
+                                                                     información ingresada
+
+
+e) Modelo de datos
+              Dato                                            Tipo
+ id_gasto                        int
+ id_usuario                      int
+ monto_gasto                     decimal
+ categoria                       varchar
+ fecha_gasto                     date
+
+
+f) Criterios de aceptación
+     N°                                           Detalle
+ CA-01       Dado que el usuario ingresa datos válidos, cuando selecciona "Registrar
+             gasto", entonces el sistema almacena la información
+ CA-02       Dado que el usuario selecciona una categoría, cuando registra el gasto,
+             entonces el sistema asocia correctamente la categoría
+ CA-03       Dado que existen gastos registrados, cuando el usuario consulta el historial,
+             entonces el sistema muestra la lista correspondiente
+ CA-04       Dado que el usuario elimina un gasto registrado, cuando confirma la
+             acción, entonces el sistema retira el registro
+ CA-05       Dado que el usuario ingresa un monto inválido, cuando intenta registrar el
+             gasto, entonces el sistema muestra un mensaje de error
+
+
+
+
+                                                                                          50
+ Historia de Usuario       HU11
+ Autor                     Yadira Yajaira Vera Salinas
+ Fecha creación            05/06/2026            Fecha modificación     05/06/2026
+
+
+a) Historia de Usuario
+ Sección               Contenido
+ Yo como               Estudiante foráneo usuario de EasyLife AI
+ Quiero                Visualizar un reporte de mis gastos en alimentación por semana
+                       y mes
+ Para                  Evaluar en qué estoy gastando más y tomar mejores decisiones
+                       sobre mi presupuesto
+
+
+b) Funcionalidades
+  N°                                          Detalle
+ F-01      El sistema muestra un resumen de gastos totales del mes en curso
+ F-02      El sistema permite filtrar el reporte por semana o por mes
+ F-03      El sistema muestra un desglose por categoría (mercado, delivery, menú
+           universitario, etc.)
+ F-04      El sistema indica visualmente si el usuario superó, está cerca o está dentro
+           del presupuesto configurado
+
+
+c) Reglas de negocio
+   N°                                          Detalle
+ RN-01      El reporte solo se genera si el usuario tiene al menos un gasto registrado en
+            el periodo seleccionado
+ RN-02      Los gastos mostrados corresponden únicamente al usuario autenticado
+            activo
+ RN-03      El porcentaje de presupuesto utilizado se calcula en base al presupuesto
+            mensual configurado en HU09
+
+
+
+                                                                                          51
+ RN-04        Si no hay presupuesto configurado, el reporte muestra los gastos sin
+              comparativa de límite
+
+
+d) Detalle de campos
+ N°       Tipo objeto     Nombre objeto            Valor            Consideraciones
+ 1    SELECTOR           Filtro de periodo     "Semanal" /     Permite alternar entre vista
+                                               "Mensual"       semanal y mensual
+ 2    TEXT /             Total gastado         S/. XX.XX       Se calcula sumando todos
+      NÚMERO                                                   los gastos del periodo
+ 3    BARRA /            Porcentaje de         XX%             Solo visible si hay
+      INDICADOR presupuesto usado                              presupuesto configurado
+ 4    LISTA              Desglose por          Mercado /       Muestra el monto por cada
+                         categoría             Delivery /      categoría
+                                               Menú / Otro
+
+
+e) Modelo de datos
+              Dato                                           Tipo
+ id_reporte                      int
+ id_usuario                      int
+ periodo (semana/mes)            varchar
+ fecha_inicio                    date
+ fecha_fin                       date
+ total_gastado                   decimal
+ categoria                       varchar
+ porcentaje_presupuesto          decimal
+
+
+f) Criterios de aceptación
+     N°                                         Detalle
+ CA-01        Dado que el usuario tiene gastos registrados, cuando accede a "Ver
+              reporte", entonces el sistema muestra el total gastado en el mes actual
+
+                                                                                          52
+ CA-02      Dado que el usuario selecciona el filtro "semanal", cuando confirma la
+            selección, entonces el sistema recalcula y muestra solo los gastos de esa
+            semana
+ CA-03      Dado que el usuario configuró un presupuesto mensual, cuando visualiza el
+            reporte, entonces el sistema muestra un indicador del porcentaje del
+            presupuesto utilizado
+ CA-04      Dado que no hay gastos registrados en el periodo, cuando accede al reporte,
+            entonces el sistema muestra "No hay gastos registrados para este período"
+
+
+
+
+ Historia de Usuario       HU12
+ Autor                     Yadira Yajaira Vera Salinas
+ Fecha creación            05/06/2026            Fecha modificación     05/06/2026
+
+
+a) Historia de Usuario
+ Sección                Contenido
+ Yo como                Joven que vive solo y desea organizar su alimentación
+ Quiero                 Registrarme con mis datos básicos e iniciar sesión en la
+                        aplicación
+ Para                   Acceder a mis ingredientes, recetas y reportes de forma segura y
+                        personalizada
+
+
+b) Funcionalidades
+  N°                                           Detalle
+ F-01      El sistema permite registrar un nuevo usuario con nombre, correo
+           electrónico y contraseña
+ F-02      El sistema permite iniciar sesión con correo y contraseña registrados
+ F-03      El sistema permite cerrar sesión desde cualquier pantalla de la app
+ F-04      El sistema permite recuperar contraseña mediante el correo electrónico
+           registrado
+
+
+                                                                                        53
+c) Reglas de negocio
+     N°                                         Detalle
+ RN-01        El correo electrónico debe ser único; no se permiten dos cuentas con el
+              mismo correo
+ RN-02        La contraseña debe tener mínimo 8 caracteres, incluyendo al menos un
+              número y una letra mayúscula
+ RN-03        Tras 5 intentos fallidos consecutivos, la cuenta se bloquea temporalmente
+              por 15 minutos
+ RN-04        Los datos del usuario son de uso exclusivo dentro de la plataforma
+              EasyLife AI
+
+
+d) Detalle de campos
+ N°       Tipo objeto       Nombre              Valor               Consideraciones
+                             objeto
+ 1    INPUT             Nombre           Texto libre            Campo obligatorio para
+      TEXT              completo                                el registro
+ 2    INPUT             Correo           formato@correo.com Campo obligatorio; debe
+      TEXT              electrónico                             ser único en el sistema
+ 3    INPUT             Contraseña       Mínimo 8 caracteres    Obligatorio; debe incluir
+      PASSWORD                                                  número y mayúscula
+ 4    BUTTON            Registrarse      N/A                    Se activa cuando todos
+                                                                los campos son válidos
+ 5    BUTTON            Iniciar sesión   N/A                    Requiere correo y
+                                                                contraseña registrados
+ 6    LINK              Recuperar        N/A                    Envía enlace al correo
+                        contraseña                              registrado
+
+
+
+
+                                                                                          54
+e) Modelo de datos
+              Dato                                        Tipo
+ id_usuario                    int
+ nombre                        varchar
+ correo_electronico            varchar
+ contrasena_hash               varchar
+ fecha_registro                date
+ estado_cuenta                 bit
+
+
+f) Criterios de aceptación
+   N°                                           Detalle
+ CA-01     Dado que el usuario ingresa datos válidos, cuando presiona "Registrarse",
+           entonces el sistema crea la cuenta y redirige al inicio
+ CA-02     Dado que el correo ya existe, cuando presiona "Registrarse", entonces el
+           sistema muestra "Este correo ya está registrado"
+ CA-03     Dado que el usuario ingresa credenciales correctas, cuando presiona
+           "Iniciar sesión", entonces el sistema autentica y muestra la pantalla
+           principal
+ CA-04     Dado que el usuario falla 5 veces consecutivas, cuando intenta el quinto
+           intento, entonces el sistema bloquea el acceso 15 minutos y muestra un
+           aviso
+
+
+
+
+ Historia de Usuario      HU13
+ Autor                    Diego
+ Fecha creación           05/06/2026             Fecha modificación    05/06/2026
+
+
+a) Historia de Usuario
+ Sección               Contenido
+ Yo como               Usuario de EasyLife AI
+
+                                                                                       55
+ Quiero                 Suscribirme a un plan premium
+ Para                   Acceder a funciones avanzadas de la aplicación
+
+
+b) Funcionalidades
+     N°                                         Detalle
+F-01        El sistema permite activar una suscripción premium
+F-02        El sistema muestra el estado de la suscripción
+F-03        El sistema permite renovar la suscripción
+F-04        El sistema permite cancelar la suscripción
+F-05        El sistema registra el historial de suscripciones
+
+
+c) Reglas de negocio
+     N°                                          Detalle
+ RN-01        La suscripción solo se paga en soles (PEN)
+ RN-02        El acceso premium dura 30 días
+ RN-03        Una cuenta solo puede tener una suscripción activa
+ RN-04        El usuario debe contar con una cuenta registrada
+ RN-05        El sistema desactiva el plan vencido automáticamente
+
+
+d) Detalle de campos
+ N°       Tipo objeto      Nombre                Valor               Consideraciones
+                            objeto
+ 1        SELECT        Tipo de plan     Premium Estudiante      Campo obligatorio
+ 2        INPUT         Precio           S/. xx.xx               Solo lectura
+          TEXT
+ 3        DATE          Fecha de         dd/mm/yyyy              Generado
+                        inicio                                   automáticamente
+ 4        DATE          Fecha de         dd/mm/yyyy              Calculado a 30 días
+                        vencimiento
+
+
+
+                                                                                       56
+ 5    BUTTON           Suscribirse        N/A                      Activo cuando el pago
+                                                                   es válido
+ 6    LABEL            Estado             Activa/Inactiva          Visible para el usuario
+                       suscripción
+
+
+e) Modelo de datos
+              Dato                                          Tipo
+ id_suscripcion                 int
+ id_usuario                     int
+ tipo_plan                      varchar
+ fecha_inicio                   date
+ fecha_fin                      date
+ estado                         bit
+
+
+f) Criterios de aceptación
+     N°                                         Detalle
+ CA-01       Dado que el usuario realiza el pago, cuando se confirma la transacción,
+             entonces el sistema activa el plan premium
+ CA-02       Dado que la suscripción vence, cuando finaliza el periodo de 30 días,
+             entonces el sistema desactiva el acceso premium
+ CA-03       Dado que el usuario renueva su plan, cuando el pago es exitoso, entonces
+             el sistema actualiza la fecha de vencimiento
+ CA-04       Dado que el usuario cancela la suscripción, cuando confirma la acción,
+             entonces el sistema cambia el estado a inactivo
+
+
+ Historia de Usuario       HU14 – Cliente
+ Autor                     Diego
+ Fecha creación            05/06/2026             Fecha modificación       05/06/2026
+
+
+a) Historia de Usuario
+
+                                                                                             57
+ Sección                Contenido
+ Yo como                Joven que vive solo y desea organizar su alimentación
+ Quiero                 Gestionar mi información personal
+ Para                   Mantener mis datos actualizados en la plataforma
+
+
+b) Funcionalidades
+     N°                                         Detalle
+F-01        El sistema permite visualizar datos del cliente
+F-02        El sistema permite editar información personal
+F-03        El sistema permite actualizar contraseña
+F-04        El sistema permite visualizar historial de actividad
+
+
+c) Reglas de negocio
+     N°                                         Detalle
+ RN-01        El correo del cliente debe ser único
+ RN-02        Los datos del cliente son privados dentro de la plataforma
+ RN-03        El cliente debe estar autenticado para modificar datos
+ RN-04        El sistema valida el formato correcto del correo electrónico
+
+
+d) Detalle de campos
+ N°       Tipo objeto      Nombre                Valor                 Consideraciones
+                            objeto
+ 1        INPUT         Nombre           Texto libre               Campo obligatorio
+          TEXT          completo
+ 2        INPUT         Correo           formato@correo.com Debe ser único
+          TEXT          electrónico
+ 3        INPUT         Número           9 dígitos                 Campo opcional
+          TEXT          telefónico
+ 4        INPUT         Dirección        Texto libre               Opcional
+          TEXT
+
+                                                                                         58
+ 5    BUTTON            Guardar             N/A                     Actualiza información
+                        cambios
+ 6    BUTTON            Editar perfil       N/A                     Permite modificar datos
+
+
+e) Modelo de datos
+              Dato                                           Tipo
+ id_cliente                       int
+ nombre                           varchar
+ correo_electronico               varchar
+ telefono                         varchar
+ direccion                        varchar
+
+
+f) Criterios de aceptación
+     N°                                           Detalle
+ CA-01        Dado que el cliente modifica sus datos, cuando guarda los cambios,
+              entonces el sistema actualiza la información
+ CA-02        Dado que el correo ya existe, cuando intenta registrarlo, entonces el
+              sistema muestra un mensaje de error
+ CA-03        Dado que el cliente cambia su contraseña, cuando cumple las validaciones,
+              entonces el sistema guarda la nueva contraseña
+ CA-04        Dado que el usuario inicia sesión, cuando accede al perfil, entonces el
+              sistema muestra su información registrada
+
+
+ Historia de Usuario        HU15 – Administrador
+ Autor                      Diego
+ Fecha creación             05/06/2026             Fecha modificación      05/06/2026
+
+
+a) Historia de Usuario
+ Sección                Contenido
+ Yo como                Administrador de EasyLife AI
+
+                                                                                            59
+ Quiero                  Gestionar usuarios, recetas y contenido de la plataforma
+ Para                    Mantener el correcto funcionamiento y la calidad del contenido
+                         disponible en la aplicación
+
+
+b) Funcionalidades
+     N°                                         Detalle
+F-01         El sistema permite visualizar usuarios registrados
+F-02         El sistema permite gestionar recetas publicadas
+F-03         El sistema permite editar o eliminar contenido
+F-04         El sistema permite administrar el estado de usuario
+
+
+c) Reglas de negocio
+     N°                                         Detalle
+ RN-01        Solo los administradores tienen acceso al panel administrativo
+ RN-02        El administrador puede bloquear contenido inapropiado
+ RN-03        El sistema registra cambios realizados por el administrador
+ RN-04        Los usuarios inactivos pueden ser deshabilitados
+
+
+d) Detalle de campos
+ N°       Tipo objeto      Nombre                Valor                Consideraciones
+                            objeto
+ 1        Tabla             Lista de     Datos registrados         Visible solo para
+                            usuarios                               administradores
+ 2        Tabla             Lista de     Recetas publicas          Permite edición y
+                            recetas                                eliminación
+ 3        Boton              Editar      N/A                       Actualiza información
+                           contenido
+ 4        Boton             Eliminar     N/A                       Solicita confirmación
+                           contenido
+ 5        Label              Estado      Activo/Inactivo           Visible en panel
+                            usuario                                administrativo
+
+
+                                                                                           60
+e) Modelo de datos
+           Dato                                           Tipo
+ Id_administrador              int
+ Nombre_admin                  varchar
+ Correo_admin                  varchar
+ rol                           varchar
+ estado                        bit
+
+
+f) Criterios de aceptación
+   N°                                        Detalle
+ CA-01     Dado que el administrador inicia sesión, cuando accede al panel, entonces
+           el sistema muestra las herramientas de gestión
+ CA-02     Dado que el administrador elimina contenido, cuando confirma la acción,
+           entonces el sistema actualiza la plataforma
+ CA-03     Dado que un usuario incumple reglas, cuando el administrador lo
+           deshabilita, entonces el sistema bloquea su acceso
+ CA-04     Dado que el administrador modifica contenido, cuando guarda los cambios,
+           entonces el sistema actualiza la información
+
+
+ Historia de Usuario     HU16 – Pago con Yape
+ Autor                   Diego
+ Fecha creación          05/06/2026           Fecha modificación     05/06/2026
+
+
+a) Historia de Usuario
+ Sección             Contenido
+ Yo como             Usuario
+ Quiero              Pagar mediante Yape
+ Para                Adquirir la suscripción premium
+
+
+
+
+                                                                                       61
+b) Funcionalidades
+     N°                                           Detalle
+F-01        El sistema permite pagar mediante Yape
+F-02        El sistema valida el pago realizado
+F-03        El sistema genera un código de operación
+F-04        El sistema muestra el estado del pago
+
+
+c) Reglas de negocio
+     N°                                           Detalle
+ RN-01        El monto debe coincidir con el plan seleccionado
+ RN-02        El código de operación no puede repetirse
+ RN-03        La solicitud expira después de 2 minutos
+ RN-04        El pago debe ser confirmado antes de activar la suscripción
+
+
+d) Detalle de campos
+ N°       Tipo objeto      Nombre                  Valor            Consideraciones
+                            objeto
+ 1        INPUT         Código de       Numérico                 Campo obligatorio
+          TEXT          operación
+ 2        INPUT FILE Captura de         JPG/PNG                  Opcional
+                        pago
+ 3        LABEL         Monto a         S/. xx.xx                Generado
+                        pagar                                    automáticamente
+ 4        TIMER         Tiempo de       2 minutos                Expira automáticamente
+                        validación
+ 5        BUTTON        Validar pago    N/A                      Confirma operación
+ 6        LABEL         Estado de       Pendiente/Aprobado       Actualización
+                        pago                                     automática
+
+
+
+
+                                                                                      62
+e) Modelo de datos
+              Dato                                      Tipo
+ id_pago                       int
+ id_usuario                    int
+ codigo_operacion              varchar
+ monto                         decimal
+ fecha_pago                    date
+
+
+f) Criterios de aceptación
+   N°                                         Detalle
+ CA-01     Dado que el usuario realiza el pago, cuando el sistema valida la operación,
+           entonces activa la suscripción
+ CA-02     Dado que el código ya existe, cuando intenta registrar el pago, entonces el
+           sistema muestra un error
+ CA-03     Dado que el pago es rechazado, cuando la operación falla, entonces el
+           sistema muestra una notificación
+ CA-04     Dado que el tiempo expira, cuando pasan 2 minutos sin confirmar el pago,
+           entonces el sistema cancela la operación
+
+
+ Historia de Usuario     HU17 – Pago con Plin
+ Autor                   Diego
+ Fecha creación          05/06/2026            Fecha modificación     05/06/2026
+
+
+a) Historia de Usuario
+ Sección             Contenido
+ Yo como             Usuario
+ Quiero              Pagar mediante Plin
+ Para                Acceder a las funciones premium
+
+
+
+
+                                                                                         63
+b) Funcionalidades
+     N°                                        Detalle
+F-01        El sistema permite pagar mediante Plin
+F-02        El sistema confirma el pago en tiempo real
+F-03        El sistema registra operaciones realizadas
+F-04        El sistema muestra el historial de pagos
+
+
+c) Reglas de negocio
+     N°                                         Detalle
+ RN-01        Solo se aceptan cuentas bancarias compatibles con Plin
+ RN-02        Después de 3 intentos fallidos se bloquea temporalmente el pago
+ RN-03        El sistema valida el número de celular asociado
+ RN-04        El pago debe completarse antes de activar funciones premium
+
+
+d) Detalle de campos
+ N°       Tipo objeto      Nombre               Valor              Consideraciones
+                            objeto
+ 1        INPUT         Número          9 dígitos               Campo obligatorio
+          TEXT          celular
+ 2        LABEL         Número          Celular EasyLife AI     Visible para el usuario
+                        destino
+ 3        LABEL         Monto a         S/. xx.xx               Automático
+                        pagar
+ 4        BUTTON        Confirmar       N/A                     Procesa la operación
+                        pago
+ 5        LABEL         Estado del      Pendiente/Aprobado      Actualización
+                        pago                                    automática
+ 6        LABEL         Código de       Numérico                Generado por el sistema
+                        operación
+
+
+
+
+                                                                                          64
+e) Modelo de datos
+              Dato                                      Tipo
+ id_pago                      int
+ id_usuario                   int
+ codigo_operacion             varchar
+ monto                        decimal
+ fecha_pago                   date
+
+
+f) Criterios de aceptación
+   N°                                         Detalle
+ CA-01     Dado que el usuario realiza el pago correctamente, cuando la operación es
+           confirmada, entonces el sistema activa el acceso premium
+ CA-02     Dado que el pago falla varias veces, cuando supera el límite permitido,
+           entonces el sistema bloquea temporalmente la operación
+ CA-03     Dado que el usuario consulta pagos, cuando accede al historial, entonces el
+           sistema muestra las operaciones realizadas
+ CA-04     Dado que el número no es válido, cuando intenta realizar el pago, entonces
+           el sistema muestra un mensaje de error
+
+
+
+
+ Historia de Usuario     HU18
+ Autor                   Camila
+ Fecha creación          09/06/2026            Fecha modificación     09/06/2026
+
+
+a) Historia de Usuario
+ Sección             Contenido
+ Yo como             Usuario de EasyLife AI
+ Quiero              Pagar con tarjeta de débito
+ Para                Realizar compras dentro de la aplicación
+
+
+
+                                                                                       65
+b) Funcionalidades
+     N°                                         Detalle
+F-01        Permitir ingresar los datos de una tarjeta de débito
+F-02        Validar la información ingresada antes de procesar el pago
+F-03        Procesar el pago de la suscripción seleccionada
+F-04        Mostrar la confirmación del pago realizado
+
+
+c) Reglas de negocio
+     N°                                         Detalle
+ RN-01       La tarjeta debe encontrarse vigente al momento del pago
+ RN-02       Todos los campos obligatorios deben estar completos
+ RN-03       El pago solo se procesa si la entidad financiera lo autoriza
+ RN-04       Cada transacción debe registrarse en el historial del usuario
+
+
+d) Detalle de campos
+ N°       Tipo objeto      Nombre objeto           Valor            Consideraciones
+ 1        INPUT TEXT     Número de tarjeta     16 dígitos      Obligatorio
+
+ 2        INPUT TEXT     Nombre del titular    Texto libre     Obligatorio
+ 3        INPUT TEXT     Fecha de              MM/AA           Debe ser válida
+                         vencimiento
+ 4        INPUT          CVV                   3 dígitos       Campo seguro
+          PASSWORD
+
+
+e) Modelo de datos
+              Dato                                           Tipo
+ id_pago                         Int
+ Id_usuario                      Int
+ numero_tarjeta                  String
+ monto                           Decimal
+ fecha_pago                      DateTime
+
+                                                                                      66
+f) Criterios de aceptación
+   N°                                           Detalle
+ CA-01      Dado que el usuario ingresa datos válidos, cuando confirma el pago,
+            entonces el sistema deberá procesar la transacción
+ CA-02      Dado que el pago es exitoso, cuando finaliza la operación, entonces el
+            sistema deberá mostrar una confirmación
+ CA-03      Dado que la tarjeta es inválida, cuando intenta pagar, entonces el sistema
+            deberá mostrar un mensaje de error
+ CA-04      Dado que el banco rechaza la operación, cuando se procesa el pago,
+            entonces el sistema deberá informar el rechazo
+ CA-05      Dado que el pago fue exitoso, cuando el usuario consulte su historial,
+            entonces la transacción deberá aparecer registrada
+
+
+
+
+ Historia de Usuario      HU19
+ Autor                    Camila
+ Fecha creación           09/06/2026             Fecha modificación    09/06/2026
+
+
+a) Historia de Usuario
+ Sección               Contenido
+ Yo como               Usuario de EasyLife AI
+ Quiero                Visualizar los precios en soles
+ Para                  Conocer el costo real de la suscripción
+
+
+b) Funcionalidades
+  N°                                          Detalle
+ F-01      Mostrar el precio de los planes en soles peruanos
+ F-02      Actualizar automáticamente los precios mostrados
+ F-03      Mostrar el detalle del costo de cada plan
+ F-04      Permitir comparar los distintos planes disponibles
+
+
+                                                                                         67
+c) Reglas de negocio
+     N°                                            Detalle
+ RN-01        Todos los precios deben mostrarse en moneda nacional (PEN)
+ RN-02        El precio debe visualizarse antes de confirmar una compra
+ RN-03        Los precios deben coincidir con los registrados en el sistema
+ RN-04        Cualquier cambio de precio debe reflejarse automáticamente
+
+
+d) Detalle de campos
+ N°       Tipo objeto      Nombre                  Valor              Consideraciones
+                               objeto
+ 1    TEXT              Nombre del           Básico/Premium      Visible
+                        plan
+ 2    TEXT              Precio               S/. XX.XX           En soles
+ 3    TEXT              Beneficios           Texto descriptivo   Opcional
+ 4    BUTTON            Seleccionar          N/A                 Inicia compra
+                        plan
+
+
+e) Modelo de datos
+              Dato                                            Tipo
+ id_plan                           Int
+ nombre_plan                       String
+ precio                            Decimal
+ moneda                            String
+ descripcion                       String
+
+
+f) Criterios de aceptación
+     N°                                            Detalle
+ CA-01        Dado que existen planes disponibles, cuando el usuario accede a
+              suscripciones, entonces el sistema deberá mostrar los precios en soles
+
+
+
+                                                                                        68
+ CA-02      Dado que el usuario revisa un plan, cuando visualiza la información,
+            entonces deberá observar el costo total
+ CA-03      Dado que existen varios planes, cuando el usuario los consulta, entonces
+            deberá poder compararlos
+ CA-04      Dado que se actualiza el precio de un plan, cuando el usuario accede
+            nuevamente, entonces deberá visualizar el nuevo precio
+ CA-05      Dado que el usuario selecciona un plan, cuando inicia la compra, entonces
+            deberá visualizar el precio antes de confirmar
+
+
+
+
+ Historia de Usuario      HU20
+ Autor                    Camila
+ Fecha creación           09/06/2026            Fecha modificación    09/06/2026
+
+
+a) Historia de Usuario
+ Sección              Contenido
+ Yo como              Usuario de EasyLife AI
+ Quiero               Realizar pagos virtuales desde la aplicación
+ Para                 Evitar procesos presenciales
+
+
+b) Funcionalidades
+  N°                                          Detalle
+ F-01      Permitir realizar pagos mediante plataformas virtuales
+ F-02      Procesar pagos de manera segura dentro de la aplicación
+ F-03      Mostrar el estado de la transacción en tiempo real
+ F-04      Generar una constancia digital del pago realizado
+
+
+c) Reglas de negocio
+   N°                                          Detalle
+ RN-01      El usuario debe estar autenticado para realizar pagos
+
+
+                                                                                        69
+ RN-02     Solo se aceptan medios de pago autorizados por la plataforma
+ RN-03     Toda transacción debe registrarse en el historial de pagos
+ RN-04     La constancia se genera únicamente para pagos exitosos
+
+
+d) Detalle de campos
+ N°   Tipo objeto      Nombre                  Valor                Consideraciones
+                        objeto
+ 1    SELECTOR       Método de       Yape, Plin, Tarjeta          Obligatorio
+                     pago
+ 2    TEXT           Monto a         Decimal                      Solo lectura
+                     pagar
+ 3    TEXT           Estado de       Pendiente/Exitoso/Fallido Automático
+                     pago
+ 4    BUTTON         Confirmar       N/A                          Ejecuta transacción
+                     pago
+
+
+e) Modelo de datos
+              Dato                                         Tipo
+ id_transaccion                Int
+ id_usuario                    Int
+ metodo_pago                   String
+ monto                         Decimal
+ estado                        String
+ fecha_transaccion             DateTime
+
+
+f) Criterios de aceptación
+     N°                                        Detalle
+ CA-01     Dado que el usuario selecciona un método de pago válido, cuando confirma
+           la operación, entonces el sistema deberá procesar la transacción
+
+
+
+                                                                                        70
+ CA-02      Dado que el pago es exitoso, cuando finaliza el proceso, entonces el
+            sistema deberá mostrar una confirmación
+ CA-03      Dado que ocurre un error durante la operación, cuando se procesa el pago,
+            entonces el sistema deberá mostrar un mensaje indicando el problema
+ CA-04      Dado que la transacción finaliza correctamente, cuando el usuario consulta
+            su historial, entonces el pago deberá aparecer registrado
+ CA-05      Dado que el pago fue exitoso, cuando finaliza la operación, entonces el
+            sistema deberá generar una constancia digital
+
+
+
+
+ Historia de Usuario      HU21
+ Autor                    Franco
+ Fecha creación           09/06/26              Fecha modificación      09/06/26
+
+
+a) Historia de Usuario
+ Sección               Contenido
+ Yo como               Estudiante
+ Quiero                Recibir recordatorios mediante mensajes de correo electrónico
+
+ Para                  Mantenerme informado de mis actividades próximas a realizar
+
+
+b) Funcionalidades
+  N°                                          Detalle
+ F-01      Generar recordatorios automáticos de actividades
+ F-02      Enviar notificaciones al correo registrado
+ F-03      Mostrar información de la actividad próxima
+ F-04      Permitir la configuración de recordatorios
+
+
+
+
+                                                                                        71
+c) Reglas de negocio
+     N°                                           Detalle
+ RN-01     El usuario debe tener un correo electrónico registrado
+ RN-02     Solo se enviarán recordatorios de actividades pendientes
+ RN-03     El sistema enviará la notificación antes de la fecha programada
+ RN-04     No se enviarán correos duplicados para la misma actividad
+
+
+d) Detalle de campos
+ N°   Tipo objeto       Nombre                    Valor                Consideraciones
+                         objeto
+ 1    LABEL          Correo               usuario@correo.com Obtenido del perfil del
+                     electrónico                                   usuario
+ 2    LABEL          Nombre de            Texto                    Visible en el correo
+                     actividad
+ 3    LABEL          Fecha y hora         DD/MM/AAAA               Información de la
+                                          HH:MM                    actividad
+ 4    LABEL          Descripción          Texto                    Detalle de la actividad
+ 5    BUTTON         Configurar           N/A                      Permite modificar la
+                     recordatorio                                  anticipación del aviso
+ 6    LABEL          Estado de            Enviado / Pendiente      Actualización automática
+                     envío
+
+
+e) Modelo de datos
+           Dato                                             Tipo
+ idNotificacion                  int
+ correoUsuario                   string
+ nombreActividad                 string
+ descripcionActividad            string
+ fechaHoraActividad              datetime
+ estadoEnvio                     String
+
+                                                                                             72
+f) Criterios de aceptación
+   N°                                           Detalle
+ CA-01      El sistema envía un correo al usuario cuando existe una actividad próxima
+ CA-02      El correo contiene el nombre, fecha y descripción de la actividad
+ CA-03      El usuario recibe la notificación en el correo registrado
+ CA-04      El estado de envío se actualiza correctamente después del envío
+
+
+ Historia de Usuario       HU22 – Notificación de Horario de Comida
+ Autor                     Joaquin Alejandro Sanchez Espejo
+ Fecha creación            05/06/2026            Fecha modificación      05/06/2026
+
+
+a) Historia de Usuario
+ Sección               Contenido
+ Yo como               Usuario de EasyLife AI
+ Quiero                Recibir alertas antes de cocinar
+ Para                  Organizar mejor mi tiempo y cumplir mis horarios de comida
+
+
+b) Funcionalidades
+  N°                                           Detalle
+ F-01      El sistema permite configurar horarios de comida
+ F-02      El sistema envía notificaciones en la hora establecida
+ F-03      El usuario puede activar o desactivar las alertas
+ F-04      El sistema guarda las preferencias de notificación
+
+
+c) Reglas de negocio
+   N°                                           Detalle
+ RN-01      Las notificaciones se envían únicamente si están activadas
+ RN-02      El usuario debe establecer un horario válido
+ RN-03      Cada usuario puede configurar varios horarios de comida
+ RN-04      Las alertas deben enviarse antes del horario programado
+
+                                                                                        73
+d) Detalle de campos
+ N°       Tipo         Nombre                     Valor              Consideraciones
+          objeto        objeto
+ 1    INPUT          Hora de             HH:MM                     Campo obligatorio
+      TIME           comida
+ 2    SELECT         Tipo de             Desayuno/Almuerzo/Cena Selección obligatoria
+                     comida
+ 3    SWITCH         Activar             Sí/No                     Permite habilitar
+                     notificación                                  alertas
+ 4    INPUT          Minutos de          Número                    Define cuándo se
+      NUMBER anticipación                                          enviará la alerta
+ 5    BUTTON         Guardar             N/A                       Registra los cambios
+                     configuración
+
+
+e) Modelo de datos
+              Dato                                          Tipo
+ id_notificacion                  int
+ id_usuario                       int
+ hora_comida                      time
+ tipo_comida                      varchar
+ estado                           bit
+
+
+f) Criterios de aceptación
+     N°                                           Detalle
+ CA-01      Dado que el usuario configura un horario, cuando guarda los datos,
+            entonces el sistema registra la alerta
+ CA-02      Dado que la notificación está activa, cuando llega la hora establecida,
+            entonces el sistema envía el recordatorio
+ CA-03      Dado que el usuario desactiva la alerta, cuando se cumple el horario,
+            entonces no se envía ninguna notificación
+
+
+                                                                                          74
+ CA-04      Dado que se ingresa una hora inválida, cuando se guarda la configuración,
+            entonces el sistema muestra un mensaje de error
+
+
+ Historia de Usuario      HU23 – Recordatorio Semanal
+ Autor                    Joaquin Alejandro Sanchez Espejo
+ Fecha creación           05/06/2026            Fecha modificación    05/06/2026
+
+
+a) Historia de Usuario
+        Sección                                   Contenido
+ Yo como              Usuario de EasyLife AI
+ Quiero               Recibir recordatorios para planificar mis comidas
+ Para                 Mantener una mejor organización semanal
+
+
+b) Funcionalidades
+  N°                                          Detalle
+ F-01      El sistema envía un recordatorio semanal
+ F-02      El usuario puede seleccionar el día del recordatorio
+ F-03      El usuario puede modificar la configuración del aviso
+ F-04      El sistema registra la programación del recordatorio
+
+
+c) Reglas de negocio
+   N°                                          Detalle
+ RN-01      El recordatorio se envía solo una vez por semana
+ RN-02      El usuario debe elegir un día y hora de aviso
+ RN-03      El recordatorio puede ser desactivado por el usuario
+ RN-04      La configuración queda asociada al usuario registrado
+
+
+
+
+                                                                                        75
+d) Detalle de campos
+ N°       Tipo          Nombre                 Valor             Consideraciones
+          objeto         objeto
+ 1      SELECT       Día del           Lunes a Domingo     Campo obligatorio
+                     recordatorio
+ 2      INPUT        Hora de aviso     HH:MM               Campo obligatorio
+        TIME
+ 3      SWITCH       Activar           Sí/No               Permite habilitar o
+                     recordatorio                          deshabilitar
+ 4      BUTTON       Guardar           N/A                 Registra la programación
+                     configuración
+
+
+e) Modelo de datos
+              Dato                                        Tipo
+ id_recordatorio               int
+ id_usuario                    int
+ dia_semana                    varchar
+ hora                          time
+ estado                        bit
+
+
+f) Criterios de aceptación
+     N°                                         Detalle
+ CA-01      Dado que el usuario selecciona un día y hora, cuando guarda la
+            configuración, entonces el sistema programa el aviso
+ CA-02      Dado que llega el día establecido, cuando se cumple la hora programada,
+            entonces el sistema envía el recordatorio
+ CA-03      Dado que el usuario modifica la programación, cuando guarda los cambios,
+            entonces el sistema actualiza el aviso
+ CA-04      Dado que el recordatorio está desactivado, cuando llega la fecha
+            programada, entonces no se envía ninguna alerta
+
+
+                                                                                      76
+ Historia de Usuario        HU24 – Notificación de Ingredientes Vencidos
+ Autor                      Joaquin Alejandro Sanchez Espejo
+ Fecha creación             05/06/2026            Fecha modificación       05/06/2026
+
+
+a) Historia de Usuario
+          Sección                                      Contenido
+ Yo como                Usuario de EasyLife AI
+ Quiero                 Recibir alertas de productos próximos a vencer
+ Para                   Evitar desperdicios de alimentos
+
+
+b) Funcionalidades
+     N°                                         Detalle
+ F-01        El sistema identifica ingredientes próximos a vencer
+ F-02        El sistema envía una alerta preventiva
+ F-03        El usuario puede consultar los productos próximos a vencer
+ F-04        El sistema actualiza el estado de los ingredientes consumidos
+
+
+c) Reglas de negocio
+     N°                                          Detalle
+ RN-01        Solo se notifican productos registrados con fecha de vencimiento
+ RN-02        La alerta se envía antes de la fecha límite del producto
+ RN-03        Los productos vencidos se marcan como no disponibles
+ RN-04        Cada alerta está asociada a un ingrediente específico
+
+
+d) Detalle de campos
+ N°         Tipo          Nombre                Valor                 Consideraciones
+           objeto          objeto
+ 1        INPUT       Nombre del         Texto libre           Campo obligatorio
+          TEXT        ingrediente
+
+
+
+                                                                                        77
+ 2    INPUT          Fecha de            DD/MM/YYYY         Obligatorio
+      DATE           vencimiento
+ 3    LABEL          Estado del          Disponible/Vencido Actualizado
+                     ingrediente                            automáticamente
+ 4    BUTTON         Marcar como         N/A                Cambia el estado del
+                     consumido                              producto
+
+
+e) Modelo de datos
+              Dato                                       Tipo
+ id_ingrediente                   int
+ id_usuario                       int
+ nombre                           varchar
+ fecha_vencimiento                date
+ estado                           bit
+
+
+f) Criterios de aceptación
+     N°                                        Detalle
+ CA-01     Dado que un ingrediente está próximo a vencer, cuando se cumple el
+           periodo de aviso, entonces el sistema envía una notificación
+ CA-02     Dado que el usuario consume un ingrediente, cuando lo marca como usado,
+           entonces el sistema actualiza su estado
+ CA-03     Dado que un ingrediente no tiene fecha de vencimiento, cuando se registra,
+           entonces no genera alertas
+ CA-04     Dado que el usuario consulta sus ingredientes, cuando ingresa a la sección
+           correspondiente, entonces visualiza su estado actual
+
+
+ Historia de Usuario      HU25 – Reporte de Gastos
+ Autor                    Joaquin Alejandro Sanchez Espejo
+ Fecha creación           05/06/2026             Fecha modificación    05/06/2026
+
+
+
+                                                                                        78
+a) Historia de Usuario
+          Sección                                     Contenido
+ Yo como                 Usuario de EasyLife AI
+ Quiero                  Visualizar mis gastos en comida
+ Para                    Controlar mi presupuesto personal
+
+
+b) Funcionalidades
+     N°                                            Detalle
+ F-01        El sistema registra los gastos realizados
+ F-02        El sistema genera un reporte por periodos
+ F-03        El usuario puede visualizar gráficos de gastos
+ F-04        El sistema muestra el total gastado acumulado
+
+
+c) Reglas de negocio
+     N°                                            Detalle
+ RN-01        Los gastos deben estar asociados a un usuario
+ RN-02        Los montos registrados deben ser mayores a cero
+ RN-03        Los reportes se generan según el periodo seleccionado
+ RN-04        La información económica es privada para cada usuario
+
+
+d) Detalle de campos
+ N°         Tipo         Nombre                    Valor              Consideraciones
+           objeto         objeto
+ 1        INPUT       Monto            S/. xx.xx                  Campo obligatorio
+          NUMBER      gastado
+ 2        INPUT       Fecha del        DD/MM/YYYY                 Obligatorio
+          DATE        gasto
+ 3        SELECT      Categoría de     Mercado/Delivery/Otros Permite clasificar gastos
+                      gasto
+
+
+
+                                                                                        79
+ 4    SELECT         Periodo del       Semanal/Mensual           Filtra la información
+                     reporte
+
+
+e) Modelo de datos
+              Dato                                        Tipo
+ id_gasto                       int
+ id_usuario                     int
+ monto                          decimal
+ fecha_gasto                    date
+ categoria                      varchar
+
+
+f) Criterios de aceptación
+     N°                                        Detalle
+ CA-01       Dado que el usuario registra un gasto, cuando guarda la información,
+             entonces el sistema almacena el registro
+ CA-02       Dado que el usuario selecciona un periodo, cuando solicita el reporte,
+             entonces el sistema muestra los gastos correspondientes
+ CA-03       Dado que existen gastos registrados, cuando se visualiza el reporte,
+             entonces el sistema calcula el monto total
+ CA-04       Dado que un monto ingresado es inválido, cuando intenta guardarlo,
+             entonces el sistema muestra un mensaje de error
+
+
+
+
+ Historia de Usuario       HU26
+ Autor                     Sheyla Ventocilla Sanchez
+ Fecha creación            09/06/2026            Fecha modificación      09/06/2026
+
+
+
+
+                                                                                         80
+a) Historia de Usuario
+ Sección                 Contenido
+ Yo como                 Usuario de EasyLife AI que desea medir su progreso económico
+ Quiero                  Visualizar cuánto dinero ahorré cocinando en casa en lugar de
+                         pedir delivery
+ Para                    Medir mi progreso económico y motivarme a seguir cocinando
+
+
+b) Funcionalidades
+  N°                                           Detalle
+ F-01      El sistema calcula el ahorro comparando el costo estimado de cocinar versus
+           pedir delivery para las mismas recetas
+ F-02      El sistema muestra el ahorro acumulado semanal y mensual en forma de
+           resumen visual
+ F-03      El sistema permite filtrar el reporte de ahorro por semana o por mes
+ F-04      El sistema muestra un indicador de progreso respecto al ahorro potencial
+           máximo del período
+
+
+c) Reglas de negocio
+   N°                                           Detalle
+ RN-01      El ahorro solo se calcula si el usuario tiene recetas cocinadas y gastos
+            registrados en el período seleccionado
+ RN-02      El costo estimado de delivery se calcula en base a un precio promedio
+            configurable por el sistema
+ RN-03      El reporte de ahorro solo muestra datos del usuario autenticado activo
+ RN-04      Si no hay datos suficientes para calcular el ahorro, el sistema debe informar
+            al usuario
+
+
+d) Detalle de campos
+ N°     Tipo objeto         Nombre              Valor              Consideraciones
+                             objeto
+
+
+                                                                                         81
+ 1    SELECTOR         Filtro de             Semanal /            Permite alternar entre
+                       período               Mensual              vistas
+ 2    TEXT /           Ahorro total          S/. XX.XX            Calculado
+      NÚMERO                                                      automáticamente
+ 3    BARRA            Indicador de          XX%                  Respecto al ahorro
+                       progreso                                   potencial máximo
+ 4    LISTA            Detalle por           Lista de ahorros     Solo visible en vista
+                       semana                por semana           mensual
+
+
+e) Modelo de datos
+              Dato                                              Tipo
+ id_reporte_ahorro                 int
+ id_usuario                        int
+ periodo                           varchar
+ fecha_inicio                      date
+ fecha_fin                         date
+ costo_cocinado                    decimal
+ costo_estimado_delivery           decimal
+ ahorro_total                      decimal
+
+
+f) Criterios de aceptación
+     N°                                            Detalle
+ CA-01       Dado que el usuario tiene recetas cocinadas y gastos registrados, cuando
+             accede al reporte de ahorro, entonces el sistema muestra el ahorro calculado
+ CA-02       Dado que el usuario selecciona el filtro semanal, cuando confirma la
+             selección, entonces el sistema recalcula y muestra el ahorro de esa semana
+ CA-03       Dado que el usuario selecciona el filtro mensual, cuando confirma la
+             selección, entonces el sistema muestra el ahorro acumulado del mes
+ CA-04       Dado que se muestra el ahorro, cuando el usuario visualiza el reporte,
+             entonces debe verse el indicador de progreso respecto al ahorro potencial
+
+                                                                                           82
+ CA-05      Dado que no hay datos suficientes en el período, cuando el usuario accede
+            al reporte, entonces el sistema muestra "No hay datos suficientes para
+            calcular el ahorro"
+
+
+
+
+ Historia de Usuario      HU27
+ Autor                    Sheyla Ventocilla Sanchez
+ Fecha creación           09/06/2026             Fecha modificación      09/06/2026
+
+
+a) Historia de Usuario
+ Sección               Contenido
+ Yo como               Usuario de EasyLife AI que desea mejorar su alimentación
+ Quiero                Visualizar mis calorías y nutrientes consumidos según las recetas
+                       preparadas
+ Para                  Mejorar mis hábitos alimenticios y mantener una dieta más
+                       equilibrada
+
+
+b) Funcionalidades
+  N°                                          Detalle
+ F-01      El sistema muestra un resumen de calorías y macronutrientes (proteínas,
+           carbohidratos, grasas) consumidos en el día
+ F-02      El sistema permite filtrar el reporte nutricional por día, semana o mes
+ F-03      El sistema muestra el desglose nutricional por receta preparada
+ F-04      El sistema indica visualmente si el usuario está dentro, por encima o por
+           debajo del rango calórico recomendado
+
+
+c) Reglas de negocio
+   N°                                          Detalle
+ RN-01      El reporte nutricional solo se genera si el usuario tiene recetas preparadas
+            registradas en el período seleccionado
+
+
+                                                                                           83
+ RN-02       Los valores nutricionales se calculan en base a la información registrada en
+             cada receta de la base de datos
+ RN-03       El rango calórico recomendado se establece en base a un valor estándar de
+             2000 kcal diarias, modificable en el perfil
+ RN-04       Los datos nutricionales mostrados corresponden únicamente al usuario
+             autenticado activo
+
+
+d) Detalle de campos
+ N°   Tipo objeto      Nombre objeto               Valor             Consideraciones
+ 1    SELECTOR         Filtro de             Día / Semana /     Permite alternar entre
+                       período               Mes                vistas
+ 2    TEXT /           Total de              XXXX kcal          Calculado según recetas
+      NÚMERO           calorías                                 preparadas
+ 3    BARRA            Macronutrientes Proteínas / Carbs Desglose visual por
+                                             / Grasas (g)       macronutriente
+ 4    LISTA            Desglose por          Receta + calorías Visible al desplegar el
+                       receta                aportadas          reporte
+
+
+e) Modelo de datos
+              Dato                                            Tipo
+ id_reporte_nutricional            int
+ id_usuario                        int
+ periodo                           varchar
+ fecha_inicio                      date
+ fecha_fin                         date
+ total_calorias                    decimal
+ total_proteinas                   decimal
+ total_carbohidratos               decimal
+ total_grasas                      decimal
+
+
+
+                                                                                          84
+f) Criterios de aceptación
+   N°                                         Detalle
+ CA-01     Dado que el usuario tiene recetas preparadas registradas, cuando accede al
+           reporte nutricional, entonces el sistema muestra el total de calorías
+           consumidas
+ CA-02     Dado que el usuario selecciona un período, cuando confirma el filtro,
+           entonces el sistema recalcula y muestra los valores nutricionales
+           correspondientes
+ CA-03     Dado que se muestran los nutrientes, cuando el usuario visualiza el reporte,
+           entonces debe ver el desglose de proteínas, carbohidratos y grasas
+ CA-04     Dado que el usuario visualiza el reporte, cuando consulta el indicador
+           calórico, entonces el sistema debe mostrar si está dentro, por encima o por
+           debajo del rango recomendado
+ CA-05     Dado que no hay recetas preparadas en el período, cuando el usuario
+           accede al reporte, entonces el sistema muestra "No hay datos nutricionales
+           para este período"
+
+
+
+
+ Historia de Usuario     HU28
+ Autor                   Sheyla Ventocilla Sanchez
+ Fecha creación          09/06/2026             Fecha modificación      09/06/2026
+
+
+a) Historia de Usuario
+ Sección             Contenido
+ Yo como             Estudiante foráneo usuario de EasyLife AI
+ Quiero              Visualizar mercados y supermercados cercanos a mi ubicación
+ Para                Encontrar lugares de compra rápidamente sin perder tiempo
+                     buscando en otras apps
+
+
+
+
+                                                                                         85
+b) Funcionalidades
+     N°                                         Detalle
+F-01        El sistema muestra un mapa con los mercados y supermercados cercanos a la
+            ubicación actual del usuario
+F-02        El sistema permite filtrar los resultados por tipo de establecimiento
+            (mercado, supermercado, bodega)
+F-03        El sistema muestra información básica de cada establecimiento (nombre,
+            dirección, distancia aproximada)
+F-04        El sistema permite seleccionar un establecimiento y ver cómo llegar
+            mediante Google Maps
+
+
+c) Reglas de negocio
+     N°                                          Detalle
+ RN-01        El sistema requiere que el usuario otorgue permiso de ubicación para
+              mostrar resultados cercanos
+ RN-02        Los resultados deben mostrar establecimientos dentro de un radio máximo
+              de 2 km por defecto
+ RN-03        La integración se realiza mediante la API de Google Maps, respetando los
+              límites de uso establecidos
+ RN-04        Si el usuario deniega el permiso de ubicación, el sistema debe permitir
+              ingresar una dirección manualmente
+
+
+d) Detalle de campos
+ N°       Tipo objeto       Nombre               Valor              Consideraciones
+                             objeto
+ 1        MAPA          Mapa de             Vista de mapa      Integración con Google
+                        ubicación           con marcadores     Maps API
+ 2        SELECTOR      Tipo de             Mercado /          Filtro opcional
+                        establecimiento Supermercado /
+                                            Bodega / Todos
+
+
+                                                                                         86
+ 3      TEXT           Distancia          XX km / XX min Calculada desde la
+                                                             ubicación del usuario
+ 4      BUTTON         Cómo llegar        N/A                Abre Google Maps con la
+                                                             ruta al establecimiento
+
+
+e) Modelo de datos
+             Dato                                         Tipo
+ id_establecimiento             int
+ nombre                         varchar
+ tipo                           varchar
+ direccion                      varchar
+ latitud                        decimal
+ longitud                       decimal
+ distancia_km                   decimal
+
+
+f) Criterios de aceptación
+     N°                                         Detalle
+ CA-01       Dado que el usuario otorga permiso de ubicación, cuando accede al mapa,
+             entonces el sistema muestra los establecimientos cercanos en un radio de 2
+             km
+ CA-02       Dado que se muestran establecimientos, cuando el usuario aplica un filtro
+             por tipo, entonces el sistema muestra solo los que corresponden al tipo
+             seleccionado
+ CA-03       Dado que el usuario selecciona un establecimiento, cuando visualiza su
+             detalle, entonces debe ver nombre, dirección y distancia aproximada
+ CA-04       Dado que el usuario presiona "Cómo llegar", cuando confirma la acción,
+             entonces el sistema abre Google Maps con la ruta desde su ubicación
+ CA-05       Dado que el usuario deniega el permiso de ubicación, cuando intenta usar
+             el mapa, entonces el sistema debe permitirle ingresar una dirección
+             manualmente
+
+
+                                                                                         87
+ Historia de Usuario        HU29
+ Autor                      Franco
+ Fecha creación             09/06/26              Fecha modificación      09/06/26
+
+
+a) Historia de Usuario
+ Sección                Contenido
+ Yo como                Estudiante
+ Quiero                 Compartir mi lista de compras mediante WhatsApp
+ Para                   Facilitar pedidos o compras que sean necesaria
+
+
+b) Funcionalidades
+     N°                                         Detalle
+ F-01       Seleccionar una lista de compras para compartir
+ F-02       Generar automáticamente un mensaje con los productos de la lista
+ F-03       Abrir WhatsApp con el mensaje preparado
+ F-04       Enviar la lista al contacto o grupo seleccionado
+
+
+c) Reglas de negocio
+     N°                                         Detalle
+ RN-01        Solo se pueden compartir listas existentes
+ RN-02        La lista debe contener al menos un producto
+ RN-03        El mensaje debe incluir el nombre y cantidad de cada producto
+ RN-04        El usuario debe tener WhatsApp instalado en su dispositivo
+
+
+d) Detalle de campos
+ N°       Tipo objeto      Nombre               Valor               Consideraciones
+                            objeto
+ 1        BUTTON        Compartir lista   N/A                  Inicia el proceso de
+                                                               compartir la lista.
+
+
+
+                                                                                      88
+ 2    LABEL           Nombre de la      Texto               Visible para el usuario
+                      lista
+ 3    LABEL           Productos         Lista de            Generado automáticamente
+                                        productos
+ 4    TEXT            Mensaje de        Texto               Puede ser editado antes de
+      AREA            WhatsApp                              enviar
+ 5    BUTTON          Enviar por        N/A                 Abre WhatsApp con el
+                      WhatsApp                              mensaje preparado
+ 6    LABEL           Estado de         Enviado /           Actualización automática
+                      envío             Cancelado
+
+
+e) Modelo de datos
+            Dato                                          Tipo
+ idlista                       Int
+ nombrelista                   String
+ Producto                      list
+ Cantidad                      Int
+ Telefonodestino               Int
+ Mensaje                       String
+
+
+f) Criterios de aceptación
+     N°                                         Detalle
+ CA-01      El usuario puede compartir una lista de compras mediante WhatsApp
+ CA-02      El mensaje contiene todos los productos y cantidades registradas
+ CA-03      Se abre WhatsApp con el mensaje generado automáticamente
+ CA-04      El sistema muestra una confirmación cuando la acción se realiza
+            correctamente
+
+
+
+
+                                                                                         89
+ Historia de Usuario      HU30
+ Autor                    Franco
+ Fecha creación           09/06/26                Fecha modificación      09/06/26
+
+
+a) Historia de Usuario
+ Sección              Contenido
+ Yo como              Usuario de EasyLifeAi
+ Quiero               Recibir recomendaciones de recetas según los ingredientes que
+                      tengo disponibles
+ Para                 Saber qué cocinar de manera fácil y aprovechar los ingredientes
+                      disponibles en casa
+
+
+b) Funcionalidades
+  N°                                            Detalle
+ F-01      Registrar ingredientes disponibles
+ F-02      Buscar recetas compatibles
+ F-03      Mostrar porcentaje de coincidencia por receta
+ F-04      Mostrar instrucciones detalladas de preparación
+
+
+c) Reglas de negocio
+   N°                                           Detalle
+ RN-01      Debe ingresarse al menos un ingrediente para realizar la búsqueda
+ RN-02      Las recetas se ordenan de mayor a menor coincidencia
+ RN-03      El porcentaje de coincidencia se calcula según los ingredientes disponibles
+ RN-04      Solo se mostrarán recetas activas registradas en el sistema
+
+
+
+
+                                                                                        90
+d) Detalle de campos
+
+
+ N°       Tipo objeto      Nombre                     Valor            Consideraciones
+                              objeto
+ 1    INPUT             Ingredientes          Texto               Campo obligatorio
+      TEXT              disponibles
+ 2    BUTTON            Buscar recetas        N/A                 Genera recomendaciones
+ 3    LABEL             Nombre de             Texto               Visible para el usuario
+                        receta
+ 4    LABEL             Nivel de              Porcentaje (%)      Calculado
+                        coincidencia                              automáticamente
+ 5    LABEL             Ingredientes          Lista               Se muestra si aplica
+                        faltantes
+ 6    BUTTON            Ver                   N/A                 Muestra el paso a paso de
+                        preparación                               la receta
+
+
+e) Modelo de datos
+              Dato                                              Tipo
+ idReceta                           int
+ nombreReceta                       string
+ ingredientes                       list
+ porcentajeCoincidencia             Decimal
+ ingredientesFaltantes              list
+ instrucciones                      String
+
+
+f) Criterios de aceptación
+     N°                                               Detalle
+ CA-01        El usuario puede ingresar uno o más ingredientes disponibles
+ CA-02        El sistema muestra recetas relacionadas con los ingredientes ingresados
+ CA-03        Las recetas se ordenan según el porcentaje de coincidencia
+
+                                                                                              91
+ CA-04      El usuario puede visualizar el procedimiento paso a paso de una receta
+            seleccionada
+ Historia de Usuario       HU31
+ Autor                     Yadira
+ Fecha creación            08/06/2026           Fecha modificación      09/06/2026
+
+
+a) Historia de Usuario
+ Sección               Contenido
+ Yo como               Estudiante con poco conocimiento gastronómico usuario de
+                       EasyLife AI
+ Quiero                Recibir recomendaciones de recetas personalizadas según los
+                       ingredientes que tengo disponibles
+ Para                  Saber qué cocinar paso a paso sin necesidad de buscar en otras
+                       plataformas
+
+
+b) Funcionalidades
+  N°                                          Detalle
+ F-01      El sistema analiza los ingredientes registrados por el usuario y genera
+           recomendaciones de recetas compatibles
+ F-02      El sistema muestra una lista ordenada de recetas según el nivel de
+           coincidencia con los ingredientes disponibles
+ F-03      El sistema permite filtrar las recetas recomendadas por tiempo de
+           preparación y dificultad
+ F-04      El sistema permite al usuario seleccionar una receta recomendada y ver su
+           preparación paso a paso
+
+
+
+
+                                                                                        92
+c) Reglas de negocio
+     N°                                                Detalle
+ RN-01        El motor de IA solo puede recomendar recetas si el usuario tiene al menos
+              un ingrediente registrado en el sistema
+ RN-02        Las recomendaciones deben priorizarse según el porcentaje de
+              coincidencia entre ingredientes disponibles y requeridos
+ RN-03        El sistema no debe recomendar recetas cuyos ingredientes principales no
+              estén disponibles en la lista del usuario
+ RN-04        Las recomendaciones generadas deben estar asociadas al perfil del usuario
+              autenticado activo
+
+d) Detalle de campos
+ N°       Tipo objeto       Nombre                   Valor              Consideraciones
+                             objeto
+ 1    LISTA             Ingredientes           Lista de            Ingresados previamente
+                        disponibles            ingredientes        por el usuario
+ 2    LISTA             Recetas                Lista ordenada      Generada automáticamente
+                        recomendadas           de recetas          por el motor IA
+ 3    SELECTOR          Filtro de              Rápido / Medio /    Opcional, filtra por tiempo
+                        tiempo                 Largo               de preparación
+ 4    BUTTON            Ver receta             N/A                 Redirige a la vista
+                                                                   detallada paso a paso
+
+
+e) Modelo de datos
+              Dato                                               Tipo
+ id_recomendacion                   int
+ id_usuario                         int
+ id_receta                          int
+ porcentaje_coincidencia            decimal
+ fecha_generacion                   datetime
+ filtro_tiempo                      varchar
+                                                                                             93
+f) Criterios de aceptación
+   N°                                        Detalle
+ CA-01     Dado que el usuario tiene ingredientes registrados, cuando accede al motor
+           IA, entonces el sistema debe mostrar una lista de recetas recomendadas
+           ordenadas por coincidencia
+ CA-02     Dado que existen múltiples recetas compatibles, cuando se generan las
+           recomendaciones, entonces el sistema debe priorizarlas según el porcentaje
+           de coincidencia con los ingredientes disponibles
+ CA-03     Dado que el usuario aplica un filtro de tiempo, cuando confirma la
+           selección, entonces el sistema debe mostrar únicamente recetas que
+           cumplan con ese criterio
+ CA-04     Dado que el usuario selecciona una receta recomendada, cuando presiona
+           "Ver receta", entonces el sistema debe mostrar sus instrucciones paso a
+           paso
+ CA-05     Dado que el usuario no tiene ingredientes registrados, cuando accede al
+           motor IA, entonces el sistema debe mostrar un mensaje indicando que debe
+           registrar ingredientes primero
+
+
+
+
+ Historia de Usuario     HU32
+ Autor                   Yadira
+ Fecha creación          08/06/2026              Fecha modificación   09/06/2026
+
+
+a) Historia de Usuario
+ Sección             Contenido
+ Yo como             Usuario de EasyLife AI con restricciones alimenticias
+ Quiero              Modificar o adaptar recetas según mis restricciones dietéticas o
+                     preferencias alimenticias
+ Para                Consumir alimentos adecuados a mi condición sin tener que
+                     descartar recetas completas
+
+
+                                                                                        94
+b) Funcionalidades
+     N°                                          Detalle
+F-01        El sistema permite al usuario registrar sus restricciones alimenticias
+            (vegetariano, sin gluten, sin lactosa, etc.)
+F-02        El sistema sugiere sustitutos automáticos para los ingredientes que no se
+            ajustan a las restricciones del usuario
+F-03        El sistema muestra la receta adaptada con los ingredientes sustitutos
+            incorporados
+F-04        El sistema permite guardar la versión adaptada de la receta en el perfil del
+            usuario
+
+
+c) Reglas de negocio
+     N°                                           Detalle
+ RN-01        Las restricciones alimenticias deben estar configuradas en el perfil del
+              usuario para que el sistema pueda aplicarlas
+ RN-02        El sistema solo puede sugerir sustitutos que estén previamente registrados
+              en la base de datos de ingredientes
+ RN-03        Si no existe un sustituto disponible para un ingrediente, el sistema debe
+              informar al usuario y marcar el ingrediente como no adaptable
+ RN-04        La receta adaptada debe conservar los pasos originales, modificando
+              únicamente los ingredientes afectados
+
+
+d) Detalle de campos
+ N°       Tipo objeto       Nombre                Valor             Consideraciones
+                             objeto
+ 1        MULTI-        Restricciones      Vegetariano / Sin   Configuradas en el perfil
+          SELECT        alimenticias       gluten / Sin        del usuario
+                                           lactosa / Otro
+ 2        LISTA         Ingredientes a     Lista de            Identificados
+                        sustituir          ingredientes        automáticamente por el
+                                           incompatibles       sistema
+                                                                                           95
+ 3    LISTA             Sustitutos        Lista de           Generada por el motor IA
+                        sugeridos         alternativas
+ 4    BUTTON            Guardar receta    N/A                Almacena la versión
+                        adaptada                             modificada en el perfil
+
+
+e) Modelo de datos
+              Dato                                        Tipo
+ id_adaptacion                  int
+ id_usuario                     int
+ id_receta_original             int
+ restriccion_aplicada           varchar
+ ingrediente_original           varchar
+ ingrediente_sustituto          varchar
+
+
+f) Criterios de aceptación
+     N°                                         Detalle
+ CA-01     Dado que el usuario tiene restricciones configuradas, cuando visualiza una
+           receta, entonces el sistema debe identificar y resaltar los ingredientes
+           incompatibles
+ CA-02     Dado que existen ingredientes incompatibles, cuando el sistema los detecta,
+           entonces debe sugerir al menos un sustituto para cada uno
+ CA-03     Dado que el usuario acepta los sustitutos, cuando confirma la adaptación,
+           entonces el sistema debe mostrar la receta con los ingredientes modificados
+ CA-04     Dado que el usuario guarda la receta adaptada, cuando accede a su perfil,
+           entonces debe poder visualizarla en su lista de recetas guardadas
+ CA-05     Dado que no existe sustituto disponible para un ingrediente, cuando el
+           sistema lo detecta, entonces debe informar al usuario que ese ingrediente no
+           puede adaptarse
+
+
+
+
+                                                                                        96
+ Historia de Usuario        HU33
+ Autor                      Yadira
+ Fecha creación             08/06/2026            Fecha modificación      09/06/2026
+
+
+a) Historia de Usuario
+ Sección                 Contenido
+ Yo como                 Usuario de EasyLife AI con poco tiempo disponible
+ Quiero                  Visualizar recetas rápidas filtradas por tiempo de preparación
+ Para                    Cocinar en poco tiempo sin tener que revisar todas las opciones
+                         disponibles
+
+
+b) Funcionalidades
+  N°                                            Detalle
+ F-01      El sistema muestra una sección de recetas rápidas con tiempo de preparación
+           menor o igual a 20 minutos
+ F-02      El sistema permite al usuario definir el tiempo máximo de preparación como
+           criterio de filtro
+ F-03      El sistema ordena las recetas rápidas de menor a mayor tiempo de
+           preparación
+ F-04      El sistema permite seleccionar una receta rápida y acceder a su preparación
+           paso a paso
+
+
+c) Reglas de negocio
+   N°                                            Detalle
+ RN-01      Una receta se clasifica como rápida si su tiempo de preparación es menor o
+            igual a 20 minutos
+ RN-02      El filtro de tiempo máximo debe aceptar únicamente valores positivos
+            mayores a cero
+ RN-03      Las recetas mostradas deben estar activas y disponibles en la base de datos
+            del sistema
+
+
+                                                                                           97
+ RN-04        Si el usuario tiene ingredientes registrados, las recetas rápidas deben
+              priorizarse según compatibilidad con dichos ingredientes
+
+
+d) Detalle de campos
+ N°       Tipo objeto       Nombre                Valor              Consideraciones
+                             objeto
+ 1    INPUT             Tiempo              Número entero      Valor por defecto: 20
+      NUMBER            máximo (min)        positivo           minutos
+ 2    LISTA             Recetas             Lista ordenada     Ordenadas de menor a
+                        rápidas             de recetas         mayor tiempo
+ 3    TEXT              Tiempo de           Minutos            Visible en cada tarjeta de
+                        preparación                            receta
+ 4    BUTTON            Ver receta          N/A                Redirige a la vista
+                                                               detallada con pasos
+
+
+e) Modelo de datos
+              Dato                                           Tipo
+ id_receta                        int
+ nombre_receta                    varchar
+ tiempo_preparacion               int
+ nivel_dificultad                 varchar
+ ingredientes_requeridos          varchar
+ activa                           boolean
+
+
+f) Criterios de aceptación
+     N°                                           Detalle
+ CA-01        Dado que el usuario accede a la sección de recetas rápidas, cuando carga la
+              vista, entonces el sistema debe mostrar únicamente recetas con tiempo de
+              preparación de 20 minutos o menos
+
+
+
+                                                                                            98
+              CA-02        Dado que el usuario define un tiempo máximo personalizado, cuando
+                           aplica el filtro, entonces el sistema debe mostrar solo las recetas que
+                           cumplan ese criterio
+              CA-03        Dado que existen recetas rápidas disponibles, cuando se listan, entonces
+                           deben aparecer ordenadas de menor a mayor tiempo de preparación
+              CA-04        Dado que el usuario selecciona una receta rápida, cuando presiona "Ver
+                           receta", entonces el sistema debe mostrar sus pasos de preparación
+              CA-05        Dado que no existen recetas que cumplan con el filtro de tiempo, cuando el
+                           sistema busca resultados, entonces debe mostrar el mensaje "No se
+                           encontraron recetas para el tiempo indicado"
+
+
+  4.5)       Product Backlog
+             El Product Backlog fue elaborado y gestionado en una hoja de cálculo, donde se
+             registraron las 33 historias de usuario distribuidas en 9 épicas, con sus respectivas
+             descripciones, criterios de aceptación, puntos de historia y sprint asignado. El enlace al
+             documento se incluye a continuación:
+             Product           Backlog             —            EasyLife           AI:             https://upcedupe-
+             my.sharepoint.com/:x:/g/personal/u20251e941_upc_edu_pe/IQDSqBxdTV-
+             uT5nqbsXcKfzwATvARZNshviYCxfIqXfNyWA?e=lkSNII
+
+
+  4.6)       Sprint Backlogs
+
+SP01                                                        SPRINT 1
+User Story                     WORT-ITEM / TAST
+ ID      Titulo                ID       Titulo         Descripcion         Estimacion    Responsable     Estado
+HU12     Registrarse/Iniciar   TK-01    Diseño de      Crear interfaz      21            Yadira          Pendiente
+                  sesión                Login          de inicio de                      Yajaira Vera
+                                                       sesión                            Salinas
+HU12     Registrarse/Iniciar   TK-02    Validación     Validar correo      13            Yadira          Pendiente
+                  sesión                de usuarios    y contraseña                      Yajaira Vera
+                                                                                         Salinas
+HU14            Cliente        TK-03    Registro de    Crear módulo        21            Joaquin         Pendiente
+                                        clientes       de clientes                       Alejandro
+
+
+                                                                                                                     99
+                                                                                             Sanchez
+                                                                                             Espejo
+ HU15           Proveedor            TK-04     Registro de   Crear módulo       21           Joaquin        Pendiente
+                                               proveedores   de proveedores                  Alejandro
+                                                                                             Sanchez
+                                                                                             Espejo
+ HU30        Inicio de sesión        TK-05     Integración   Implementar        21           Franco         Pendiente
+               con Google                      OAuth         acceso con                      Daniel Rios
+                                                             Google                          Huaringa
+
+
+
+
+SP02                                                                 SPRINT 2
+User Story                      WORT-ITEM / TAST
+ ID     Titulo                  ID           Titulo          Descripcion        Estimacion    Responsable    Estado
+HU01          Registrar         TK-06        Formulario      Crear formulario   21            Diego Frank    Pendiente
+             ingredientes                    ingredientes    de ingredientes                  Arredondo
+                                                                                              Córdova
+HU02            Editar          TK-07        Modificación    Permitir editar    13            Diego Frank    Pendiente
+             ingredientes                    ingredientes    ingredientes                     Arredondo
+                                                                                              Córdova
+HU03          Consultar         TK-08        Motor de        Filtrar recetas    34            Camila         Pendiente
+               recetas                       recetas         automáticamente                  Quintanilla
+         recomendadas                                                                         Simeón
+HU04     Ver preparación        TK-09        Vista           Mostrar pasos de   21            Camila         Pendiente
+             paso a paso                     detallada       preparación                      Quintanilla
+                                                                                              Simeón
+
+
+
+SP03                                                                 SPRINT 3
+User Story                      WORT-ITEM / TAST
+ ID     Titulo                  ID            Titulo         Descripcion        Estimacion   Responsable     Estado
+HU05          Planificar        TK-10         Calendario     Crear              21           Franco          Pendiente
+               comidas                        semanal        planificación                   Daniel Rios
+              semanales                                      semanal                         Huaringa
+
+
+
+
+                                                                                                                      100
+HU06     Generar lista de      TK-11   Lista         General lista       34           Franco           Pendiente
+               compras                 automática    según recetas                    Daniel Rios
+                                                                                      Huaringa
+
+
+HU07         Editar lista de   TK-12   Modificar     Agregar y           13           Joaquin          Pendiente
+               compras                 lista         eliminar                         Alejandro
+                                                     productos                        Sanchez
+                                                                                      Espejo
+HU08    Marcar                 TK-13   Estado de     Marcar              21           Joaquin          Pendiente
+        productos                      Compra        productos                        Alejandro
+        comprados                                    completados                      Sanchez
+                                                                                      Espejo
+
+
+
+
+SP04                                                          SPRINT 4
+User Story                     WORT-ITEM / TAST
+ ID     Titulo                 ID      Titulo        Descripcion         Estimacion   Responsable      Estado
+HU09          Configurar       TK-14   Configurar    Definir límite de   21           Ventocilla       Pendiente
+             presupuestos              presupuesto   gastos                           Sanchez,
+              mensuales                                                               Sheyla
+HU10     Registrar gastos      TK-15   Registro      Crear formulario    21           Ventocilla       Pendiente
+                                       financiero    de gastos                        Sanchez,
+                                                                                      Sheyla
+HU11     Ver reportes de       TK-16   Panel         Mostrar gráficos    34           Yadira Yajaira   Pendiente
+                 gastos                financiero    de gastos                        Vera Salinas
+HU25          Reporte de       TK-17   Reporte       Generar resumen     13           Joaquin          Pendiente
+                 gastos                mensual       financiero                       Alejandro
+                                                                                      Sanchez
+                                                                                      Espejo
+HU26          Reporte de       TK-18   Cálculo de    Mostrar ahorro      13           Ventocilla       Pendiente
+                ahorro                 ahorro        generado                         Sanchez,
+                                                                                      Sheyla
+
+
+
+
+                                                                                                                101
+SP05                                                      SPRINT 5
+User Story                  WORT-ITEM / TAST
+ ID     Titulo              ID        Titulo        Descripcion        Estimacion   Responsable   Estado
+HU13         Suscripción    TK-19     Gestión de    Crear planes       25           Diego Frank   Pendiente
+                                      planes        premium                         Arredondo
+                                                                                    Córdova
+HU16         Pago en Yape   TK-20     Integración   Configurar         26           Diego Frank   Pendiente
+                                      Yape          pagos Yape                      Arredondo
+                                                                                    Córdova
+
+
+HU17         Pago en Plin   TK-21     Integración   Configurar         20           Diego Frank   Pendiente
+                                      Plin          pagos Plin                      Arredondo
+                                                                                    Córdova
+
+
+HU18     Pago con tarjeta   TK-22     Pasarela de   Integrar Visa      31           Camila        Pendiente
+                                      pagos                                         Quintanilla
+                                                                                    Simeón
+HU19     Tipo de moneda     TK-23     Registro de   Mostrar moneda     13           Camila        Pendiente
+                                      numero de     en soles                        Quintanilla
+                                      moneda                                        Simeón
+
+
+
+
+SP06                                                      SPRINT 6
+User Story                  WORT-ITEM / TAST
+ ID     Titulo              ID      Titulo           Descripcion       Estimacion   Responsable   Estado
+HU20         Pago virtual   TK-24   Validación       Confirmar         13           Camila        Pendiente
+                                    virtual          pagos digitales                Quintanilla
+                                                                                    Simeón
+HU21         Notificación   TK-25   Sistema SMTP     Enviar correos    13           Franco        Pendiente
+              por correo                             automáticos                    Daniel Rios
+                                                                                    Huaringa
+HU22    Notificación de     TK-26   Alertas          Configurar        26           Joaquin       Pendiente
+              horario de            programadas      recordatorios                  Alejandro
+               comida                                                               Sanchez
+                                                                                    Espejo
+
+
+
+                                                                                                           102
+HU23         Recordatorio   TK-27   Automatización   Programar          15           Joaquin        Pendiente
+               semanal              semanal          recordatorios                   Alejandro
+                                                                                     Sanchez
+                                                                                     Espejo
+HU24         Notificación   TK-28   Control de       Detectar           30           Joaquin        Pendiente
+             ingredientes           vencimiento      productos                       Alejandro
+              vencidos                               vencidos                        Sanchez
+                                                                                     Espejo
+
+
+
+SP07                                                      SPRINT 7
+User Story                  WORT-ITEM / TAST
+ ID     Titulo              ID      Titulo           Descripcion        Estimacion   Responsable    Estado
+HU27           Reporte      TK-29   Panel            Mostrar            21           Ventocilla     Pendiente
+              nutricional           nutricional      calorías y                      Sanchez,
+                                                     nutrientes                      Sheyla
+HU28    Integración con     TK-30   API Maps         Mostrar            32           Ventocilla     Pendiente
+         Google Maps                                 mercados o                      Sanchez,
+                                                     super cercas                    Sheyla
+HU29    Integración con     TK-31   API WhatsApp     Compartir listas   21           Franco         Pendiente
+              WhatsApp                               y alertas                       Daniel Rios
+                                                                                     Huaringa
+HU31    Recomendación       TK-32   Motor IA         Recomendación      36           Yadira         Pendiente
+              de recetas            recetas          recetas                         Yajaira Vera
+                                                     inteligentes                    Salinas
+HU32     Adaptación de      TK-33   Adaptación       Modificar          15           Yadira         Pendiente
+               recetas              inteligente      recetas según                   Yajaira Vera
+                                                     restricciones                   Salinas
+HU33    Recetas rápidas     TK-34   Filtro express   Mostrar recetas    28           Yadira         Pendiente
+                                                     rápidas                         Yajaira Vera
+                                                                                     Salinas
+
+
+
+
+                                                                                                             103
+5) CONCLUSIONES Y RECOMENDACIONES:
+  6.1)   Conclusiones:
+          •   El proyecto EasyLife AI demuestra que los estudiantes foráneos y jóvenes que
+              viven solos enfrentan una problemática real vinculada a la falta de tiempo,
+              experiencia culinaria y presupuesto limitado, y que una aplicación personalizada
+              puede mejorar significativamente su calidad de vida.
+          •   La propuesta de valor basada en la personalización de recetas según ingredientes
+              disponibles, tiempo y presupuesto marca una diferencia clara frente a competidores
+              y responde directamente a las necesidades cotidianas del segmento objetivo.
+          •   La aplicación de la metodología Lean UX permitió validar hipótesis y supuestos de
+              manera estructurada, asegurando que la solución se enfoque en problemas concretos
+              y verificables, lo que fortalece la pertinencia del proyecto.
+          •   EasyLife AI, aunque es una iniciativa en etapa inicial, tiene un potencial de
+              crecimiento considerable en el contexto latinoamericano, donde la planificación
+              alimentaria sigue siendo un reto para gran parte de la población.
+
+  6.2)   Recomendaciones:
+          •   Es recomendable fortalecer la comunidad de usuarios mediante funciones sociales
+              que permitan compartir recetas y experiencias, generando mayor retención y sentido
+              de pertenencia.
+          •   Se debe profundizar en la localización cultural, adaptando las recetas y listas de
+              compras al contexto peruano y latinoamericano, con ingredientes accesibles y
+              económicos.
+          •   Incluir elementos de educación alimentaria, como consejos nutricionales y
+              comparadores de costos, ayudaría a fomentar hábitos más saludables y conscientes
+              en los usuarios.
+          •   Definir una estrategia de escalabilidad con un modelo de negocio sostenible, como
+              suscripciones o alianzas con supermercados, permitirá que la aplicación evolucione
+              más allá del MVP y se mantenga competitiva frente a aplicaciones consolidadas.
+
+
+
+
+                                                                                             104
+7. REFERENCIAS BIBLIOGRÁFICAS:
+
+  Serafinelli, S. (2024, abril 29). Lean UX: Transformando el diseño centrado en el usuario.
+         TeaCup       Lab.     https://www.teacuplab.com/es/blog/lean-ux-transformando-diseno-
+         centrado-en-el-usuario/
+
+  Universidad ESAN. (s.f.). Menos de la mitad de los jóvenes peruanos ahorra. Conexión ESAN.
+         https://www.esan.edu.pe/conexion-esan/menos-de-la-mitad-de-los-jovenes-peruanos-
+         ahorra
+
+  Jurado, D., Sejnaui, P., & Uribe-Rodríguez, A. F. (2011). Impulsividad en la compra en
+         estudiantes universitarios. Revista de Psicología Universidad de Antioquia, 3(2).
+         https://pepsic.bvsalud.org/scielo.php?script=sci_arttext&pid=S2145-
+         48922011000200003
+
+8. ANEXOS:
+
+  ANEXO A: Enlace del video
+
+  Video del Entregable 2:
+  https://upcedupe-
+  my.sharepoint.com/:f:/g/personal/u20251f093_upc_edu_pe/IgBMQ_bu3Y1vT63GevRTym5dA
+  bryaqdJkcrQafLWL1ZGXwk?e=X3pyOc
+
+
+  Video del Trabajo Parcial:
+
+  https://drive.google.com/file/d/1g4WqwOKk6ICUa-J-
+  pWe9wMOdVfQRwAQ9/view?usp=sharing
+
+
+
+
+                                                                                          105
+

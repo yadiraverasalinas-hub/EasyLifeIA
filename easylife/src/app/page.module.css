@@ -1,0 +1,121 @@
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--background) 0%, #fff 100%);
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo span {
+  color: var(--secondary);
+}
+
+.subtitle {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.formCard {
+  width: 100%;
+  max-width: 400px;
+  padding: 2.5rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  gap: 0.5rem;
+}
+
+.inputGroup label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--secondary);
+}
+
+.input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background-color: var(--surface);
+  color: var(--text);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.forgotPassword {
+  display: block;
+  text-align: right;
+  font-size: 0.875rem;
+  color: var(--primary);
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.forgotPassword:hover {
+  text-decoration: underline;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--primary);
+  color: white;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 6px rgba(230, 57, 70, 0.25);
+}
+
+.submitBtn:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(230, 57, 70, 0.3);
+}
+
+.submitBtn:active {
+  transform: translateY(0);
+}
+
+.registerLink {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.registerLink a {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.registerLink a:hover {
+  text-decoration: underline;
+}
+
+@media (prefers-color-scheme: dark) {
+  .loginContainer {
+    background: linear-gradient(135deg, #121212 0%, #1a1a1a 100%);
+  }
+}

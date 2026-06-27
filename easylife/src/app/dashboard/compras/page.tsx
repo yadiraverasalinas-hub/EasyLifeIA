@@ -9,13 +9,21 @@ interface ShoppingItem {
   checked: boolean;
   fromRecipe?: string;
   quantity?: string;
+  unit?: string;
+  category?: string;
+  priority?: "low" | "medium" | "high";
 }
 
 export default function Compras() {
   const [items, setItems] = useState<ShoppingItem[]>([]);
   const [newItem, setNewItem] = useState("");
   const [newQty, setNewQty] = useState("");
+  const [newUnit, setNewUnit] = useState("Unidad");
+  const [newCategory, setNewCategory] = useState("");
+  const [newPriority, setNewPriority] = useState<"low" | "medium" | "high">("medium");
   const [isAdding, setIsAdding] = useState(false);
+  const [isEditing, setIsEditing] = useState(false);
+  const [editingId, setEditingId] = useState<string | null>(null);
 
   useEffect(() => {
     const saved = localStorage.getItem("easylife_shopping_list");
@@ -36,12 +44,55 @@ export default function Compras() {
       id: Date.now().toString(),
       name: newItem.trim(),
       quantity: newQty.trim(),
+      unit: newUnit,
+      category: newCategory.trim(),
+      priority: newPriority,
       checked: false,
     };
     saveItems([...items, item]);
     setNewItem("");
     setNewQty("");
+    setNewUnit("Unidad");
+    setNewCategory("");
+    setNewPriority("medium");
     setIsAdding(false);
+  };
+
+  const handleEdit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!newItem.trim() || !editingId) return;
+    const updatedItems = items.map(i =>
+      i.id === editingId ? { ...i, name: newItem.trim(), quantity: newQty.trim(), unit: newUnit, category: newCategory.trim(), priority: newPriority } : i
+    );
+    saveItems(updatedItems);
+    setNewItem("");
+    setNewQty("");
+    setNewUnit("Unidad");
+    setNewCategory("");
+    setNewPriority("medium");
+    setIsEditing(false);
+    setEditingId(null);
+  };
+
+  const startEdit = (item: ShoppingItem) => {
+    setNewItem(item.name);
+    setNewQty(item.quantity || "");
+    setNewUnit(item.unit || "Unidad");
+    setNewCategory(item.category || "");
+    setNewPriority(item.priority || "medium");
+    setEditingId(item.id);
+    setIsEditing(true);
+    setIsAdding(false);
+  };
+
+  const cancelEdit = () => {
+    setNewItem("");
+    setNewQty("");
+    setNewUnit("Unidad");
+    setNewCategory("");
+    setNewPriority("medium");
+    setIsEditing(false);
+    setEditingId(null);
   };
 
   const toggleItem = (id: string) => {
@@ -87,13 +138,19 @@ export default function Compras() {
           <h1>Lista de Compras</h1>
           <p className={styles.subtitle}>{pending.length} pendiente(s) · {checked.length} comprado(s)</p>
         </div>
-        <button className={styles.addBtn} onClick={() => setIsAdding(!isAdding)}>
-          {isAdding ? "✕" : "+ Añadir"}
+        <button className={styles.addBtn} onClick={() => {
+          if (isEditing) {
+            cancelEdit();
+          } else {
+            setIsAdding(!isAdding);
+          }
+        }}>
+          {isEditing ? "✕ Cancelar Edición" : isAdding ? "✕" : "+ Añadir"}
         </button>
       </header>
 
-      {isAdding && (
-        <form className={`glass-panel ${styles.addForm}`} onSubmit={handleAdd}>
+      {(isAdding || isEditing) && (
+        <form className={`glass-panel ${styles.addForm}`} onSubmit={isEditing ? handleEdit : handleAdd}>
           <div className={styles.formRow}>
             <input
               type="text"
@@ -111,7 +168,43 @@ export default function Compras() {
               onChange={e => setNewQty(e.target.value)}
               className={styles.addQtyInput}
             />
-            <button type="submit" className={styles.saveBtn}>Agregar</button>
+          </div>
+          <div className={styles.formRow}>
+            <select
+              value={newUnit}
+              onChange={e => setNewUnit(e.target.value)}
+              className={styles.addSelect}
+            >
+              <option value="Unidad">Unidad</option>
+              <option value="Kg">Kg</option>
+              <option value="g">g</option>
+              <option value="L">L</option>
+              <option value="ml">ml</option>
+              <option value="Paquete">Paquete</option>
+              <option value="Caja">Caja</option>
+              <option value="Botella">Botella</option>
+            </select>
+            <input
+              type="text"
+              placeholder="Categoría (opcional)"
+              value={newCategory}
+              onChange={e => setNewCategory(e.target.value)}
+              className={styles.addInput}
+            />
+          </div>
+          <div className={styles.formRow}>
+            <select
+              value={newPriority}
+              onChange={e => setNewPriority(e.target.value as "low" | "medium" | "high")}
+              className={styles.addSelect}
+            >
+              <option value="low">Prioridad baja</option>
+              <option value="medium">Prioridad media</option>
+              <option value="high">Prioridad alta</option>
+            </select>
+            <button type="submit" className={styles.saveBtn}>
+              {isEditing ? "Actualizar" : "Agregar"}
+            </button>
           </div>
         </form>
       )}
@@ -130,18 +223,28 @@ export default function Compras() {
               <h3 className={styles.sectionTitle}>Por comprar</h3>
               <div className={styles.list}>
                 {pending.map(item => (
-                  <div key={item.id} className={`glass-panel ${styles.itemCard}`}>
+                  <div key={item.id} className={`glass-panel ${styles.itemCard} ${styles["priority_" + item.priority]}`}>
                     <button className={styles.checkbox} onClick={() => toggleItem(item.id)}>
                       <div className={styles.checkboxCircle} />
                     </button>
                     <div className={styles.itemInfo}>
                       <span className={styles.itemName}>{item.name}</span>
-                      {item.quantity && <span className={styles.itemQty}>{item.quantity}</span>}
-                      {item.fromRecipe && (
-                        <span className={styles.itemRecipe}>Para: {item.fromRecipe}</span>
-                      )}
+                      <div className={styles.itemDetails}>
+                        {item.quantity && <span className={styles.itemQty}>{item.quantity} {item.unit}</span>}
+                        {item.category && <span className={styles.itemCategory}>{item.category}</span>}
+                        {item.fromRecipe && (
+                          <span className={styles.itemRecipe}>Para: {item.fromRecipe}</span>
+                        )}
+                      </div>
                     </div>
-                    <button className={styles.deleteBtn} onClick={() => removeItem(item.id)}>✕</button>
+                    <div className={styles.cardActions}>
+                      <button className={styles.editBtn} onClick={() => startEdit(item)} title="Editar">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+                        </svg>
+                      </button>
+                      <button className={styles.deleteBtn} onClick={() => removeItem(item.id)}>✕</button>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -170,9 +273,19 @@ export default function Compras() {
                     </button>
                     <div className={styles.itemInfo}>
                       <span className={`${styles.itemName} ${styles.strikethrough}`}>{item.name}</span>
-                      {item.quantity && <span className={styles.itemQty}>{item.quantity}</span>}
+                      <div className={styles.itemDetails}>
+                        {item.quantity && <span className={styles.itemQty}>{item.quantity} {item.unit}</span>}
+                        {item.category && <span className={styles.itemCategory}>{item.category}</span>}
+                      </div>
                     </div>
-                    <button className={styles.deleteBtn} onClick={() => removeItem(item.id)}>✕</button>
+                    <div className={styles.cardActions}>
+                      <button className={styles.editBtn} onClick={() => startEdit(item)} title="Editar">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+                        </svg>
+                      </button>
+                      <button className={styles.deleteBtn} onClick={() => removeItem(item.id)}>✕</button>
+                    </div>
                   </div>
                 ))}
               </div>

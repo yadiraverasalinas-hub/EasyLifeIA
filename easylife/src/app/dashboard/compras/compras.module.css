@@ -68,6 +68,22 @@
   border-color: var(--primary);
 }
 
+.addSelect {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background-color: var(--background);
+  color: var(--text);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.addSelect:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
 .saveBtn {
   background-color: var(--secondary);
   color: white;
@@ -201,6 +217,13 @@
   text-transform: capitalize;
 }
 
+.itemDetails {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 .strikethrough {
   text-decoration: line-through;
   color: var(--text-muted);
@@ -217,6 +240,26 @@
   font-weight: 500;
 }
 
+.itemCategory {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  background-color: rgba(0,0,0,0.05);
+  padding: 0.1rem 0.4rem;
+  border-radius: var(--radius-full);
+}
+
+.priority_high {
+  border-left: 3px solid var(--error);
+}
+
+.priority_medium {
+  border-left: 3px solid #f59e0b;
+}
+
+.priority_low {
+  border-left: 3px solid var(--success);
+}
+
 .deleteBtn {
   background: transparent;
   color: var(--text-muted);
@@ -229,6 +272,24 @@
 .deleteBtn:hover {
   background-color: #ffe0e0;
   color: var(--error);
+}
+
+.cardActions {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.editBtn {
+  background: transparent;
+  color: var(--text-muted);
+  padding: 0.25rem 0.4rem;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.editBtn:hover {
+  background-color: #e3f2fd;
+  color: var(--primary);
 }
 
 .emptyState {
@@ -252,5 +313,12 @@
   .deleteBtn:hover {
     background-color: rgba(230, 57, 70, 0.15);
     color: #ff8a95;
+  }
+  .editBtn:hover {
+    background-color: rgba(99, 102, 241, 0.15);
+    color: #818cf8;
+  }
+  .itemCategory {
+    background-color: rgba(255,255,255,0.05);
   }
 }

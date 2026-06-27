@@ -139,6 +139,23 @@
   color: var(--error);
 }
 
+.cardActions {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.editBtn {
+  background: transparent;
+  color: var(--text-muted);
+  padding: 0.5rem;
+  border-radius: var(--radius-full);
+}
+
+.editBtn:hover {
+  background-color: #e3f2fd;
+  color: var(--primary);
+}
+
 .emptyState {
   text-align: center;
   padding: 3rem 1rem;
@@ -246,6 +263,9 @@
   }
   .deleteBtn:hover {
     background-color: rgba(230, 57, 70, 0.15);
+  }
+  .editBtn:hover {
+    background-color: rgba(99, 102, 241, 0.15);
   }
   .alertBanner {
     background: rgba(244,162,97,0.1);

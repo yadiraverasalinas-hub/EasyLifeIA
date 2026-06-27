@@ -25,6 +25,8 @@ function getExpiryStatus(expiry: string): "expired" | "soon" | "ok" | "none" {
 export default function Pantry() {
   const [ingredients, setIngredients] = useState<Ingredient[]>([]);
   const [isAdding, setIsAdding] = useState(false);
+  const [isEditing, setIsEditing] = useState(false);
+  const [editingId, setEditingId] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
 
   const [name, setName] = useState("");
@@ -62,6 +64,34 @@ export default function Pantry() {
     setIsAdding(false);
   };
 
+  const handleEditIngredient = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!name || !quantity || !editingId) return;
+    const updatedIngredients = ingredients.map(i => 
+      i.id === editingId ? { ...i, name, quantity, unit, expiry } : i
+    );
+    save(updatedIngredients);
+    setName(""); setQuantity(""); setUnit("Unidad"); setExpiry("");
+    setIsEditing(false);
+    setEditingId(null);
+  };
+
+  const startEdit = (ing: Ingredient) => {
+    setName(ing.name);
+    setQuantity(ing.quantity);
+    setUnit(ing.unit);
+    setExpiry(ing.expiry);
+    setEditingId(ing.id);
+    setIsEditing(true);
+    setIsAdding(false);
+  };
+
+  const cancelEdit = () => {
+    setName(""); setQuantity(""); setUnit("Unidad"); setExpiry("");
+    setIsEditing(false);
+    setEditingId(null);
+  };
+
   const removeIngredient = (id: string) => save(ingredients.filter(i => i.id !== id));
 
   const filtered = ingredients.filter(i =>
@@ -93,11 +123,18 @@ export default function Pantry() {
             </span>
           )}
         </div>
-        <button className={styles.deleteBtn} onClick={() => removeIngredient(ing.id)} title="Eliminar">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6V19ZM19 4H15.5L14.5 3H9.5L8.5 4H5V6H19V4Z"/>
-          </svg>
-        </button>
+        <div className={styles.cardActions}>
+          <button className={styles.editBtn} onClick={() => startEdit(ing)} title="Editar">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+            </svg>
+          </button>
+          <button className={styles.deleteBtn} onClick={() => removeIngredient(ing.id)} title="Eliminar">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6V19ZM19 4H15.5L14.5 3H9.5L8.5 4H5V6H19V4Z"/>
+            </svg>
+          </button>
+        </div>
       </div>
     );
   };
@@ -109,8 +146,14 @@ export default function Pantry() {
           <h1>Mi Despensa</h1>
           <p className={styles.subtitle}>{ingredients.length} ingrediente(s) en casa</p>
         </div>
-        <button className={styles.addBtn} onClick={() => setIsAdding(!isAdding)}>
-          {isAdding ? "✕ Cancelar" : "+ Agregar"}
+        <button className={styles.addBtn} onClick={() => {
+          if (isEditing) {
+            cancelEdit();
+          } else {
+            setIsAdding(!isAdding);
+          }
+        }}>
+          {isEditing ? "✕ Cancelar Edición" : isAdding ? "✕ Cancelar" : "+ Agregar"}
         </button>
       </header>
 
@@ -126,9 +169,9 @@ export default function Pantry() {
         </div>
       )}
 
-      {isAdding && (
-        <form className={`glass-panel ${styles.addForm}`} onSubmit={handleAddIngredient}>
-          <h3>Nuevo Ingrediente</h3>
+      {(isAdding || isEditing) && (
+        <form className={`glass-panel ${styles.addForm}`} onSubmit={isEditing ? handleEditIngredient : handleAddIngredient}>
+          <h3>{isEditing ? "Editar Ingrediente" : "Nuevo Ingrediente"}</h3>
           <div className={styles.inputRow}>
             <div className={styles.inputGroup}>
               <label>Nombre</label>
@@ -153,7 +196,9 @@ export default function Pantry() {
               <input type="date" value={expiry} onChange={e => setExpiry(e.target.value)} />
             </div>
           </div>
-          <button type="submit" className={styles.saveBtn}>Guardar Ingrediente</button>
+          <button type="submit" className={styles.saveBtn}>
+            {isEditing ? "Actualizar Ingrediente" : "Guardar Ingrediente"}
+          </button>
         </form>
       )}
 
